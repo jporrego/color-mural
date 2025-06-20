@@ -99,8 +99,9 @@ export default function Home() {
         </div>
       </section>
       <section id="metodos" className="bg-[#FEF0DE] mt-4 md:mt-8">
-        <div className="mt-0 md:mt-8 bg-[#FEF0DE] py-4 px-6 md:px-10 grid grid-cols-2 max-w-[1000px] mx-auto">
-          <div className="bg-[#FEF0DE] py-8 px-6 md:px-12 ">
+        <div className="max-w-[1000px] w-full mx-auto py-12 px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left: text */}
+          <div>
             <h2 className="text-2xl md:text-4xl font-serif mb-6">
               Así trabajamos
             </h2>
@@ -134,39 +135,20 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Right: image grid */}
           <div className="w-full max-w-[500px] aspect-[4/3] grid grid-cols-2 grid-rows-2 gap-1 mx-auto rounded-sm overflow-hidden">
-            <Image
-              src="/images/img1.png"
-              alt="Mural 1"
-              width={500}
-              height={300}
-              className="object-cover w-full h-full"
-              priority
-            />
-            <Image
-              src="/images/img1.png"
-              alt="Mural 2"
-              width={500}
-              height={300}
-              className="object-cover w-full h-full"
-              priority
-            />
-            <Image
-              src="/images/img1.png"
-              alt="Mural 3"
-              width={500}
-              height={300}
-              className="object-cover w-full h-full"
-              priority
-            />
-            <Image
-              src="/images/img1.png"
-              alt="Mural 4"
-              width={500}
-              height={300}
-              className="object-cover w-full h-full"
-              priority
-            />
+            {[1, 2, 3, 4].map((i) => (
+              <Image
+                key={i}
+                src="/images/img1.png"
+                alt={`Mural ${i}`}
+                width={500}
+                height={300}
+                className="object-cover w-full h-full"
+                priority
+              />
+            ))}
           </div>
         </div>
       </section>
