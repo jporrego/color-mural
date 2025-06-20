@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-[#3c2e23] font-sans">
       {/* ─────────────── Top Navigation ─────────────── */}
-      <header className="w-full flex justify-between items-start px-6 md:px-10 py-4 text-xs md:text-sm tracking-wide uppercase">
+      <header className="max-w-[1000px] w-full mx-auto flex justify-between items-center px-6 md:px-10 py-4 text-xs md:text-sm tracking-wide uppercase">
         <nav className="flex flex-wrap items-center gap-2 md:gap-4">
           <a href="#inicio" className="hover:underline">
             Inicio
@@ -31,9 +31,11 @@ export default function Home() {
           ↗
         </div>
       </header>
-
       {/* ─────────────── Hero Section ─────────────── */}
-      <section id="inicio" className="flex flex-col gap-10 pt-8">
+      <section
+        id="inicio"
+        className=" max-w-[1000px]  w-full  mx-auto flex flex-col gap-10 pt-8"
+      >
         {/* Headline block */}
         <div className="flex justify-between items-start mt-4 md:mt-24 px-6 md:px-10">
           <div className="mb-8">
@@ -95,13 +97,13 @@ export default function Home() {
             />
           </div>
         </div>
-
-        <div className="mt-0 md:mt-8 bg-[#FEF0DE] py-4 px-6 md:px-10 grid grid-cols-2 ">
-          <div className="bg-[#FEF0DE] py-8 px-6 md:px-12">
+      </section>
+      <section id="metodos" className="bg-[#FEF0DE] mt-4 md:mt-8">
+        <div className="mt-0 md:mt-8 bg-[#FEF0DE] py-4 px-6 md:px-10 grid grid-cols-2 max-w-[1000px] mx-auto">
+          <div className="bg-[#FEF0DE] py-8 px-6 md:px-12 ">
             <h2 className="text-2xl md:text-4xl font-serif mb-6">
               Así trabajamos
             </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 text-sm md:text-base">
               <div>
                 <p className="font-bold">1 Visita inicial</p>
@@ -132,7 +134,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <div className="w-full max-w-[500px] aspect-[4/3] grid grid-cols-2 grid-rows-2 gap-1 mx-auto rounded-sm overflow-hidden">
             <Image
               src="/images/img1.png"
