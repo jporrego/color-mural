@@ -15,7 +15,7 @@ const steps = [
   {
     title: 'Aprobación y producción',
     desc: 'Se agenda y ejecuta el mural',
-    img: '/images/process/production.jpg',
+    img: '/images/process/process1.jpg',
   },
   {
     title: 'Entrega final',
@@ -26,7 +26,7 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section id="proceso" className="bg-block1-soft py-20">
+    <section id="proceso" className="bg-block1-soft py-5 md:py-12">
       <div className="mx-auto max-w-[1100px] px-6 md:px-10">
         {/* heading */}
         <motion.h2
@@ -34,7 +34,7 @@ export default function ProcessTimeline() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12 text-center text-xl font-semibold md:text-2xl"
+          className="mb-10 text-center text-2xl md:text-3xl"
         >
           Nuestro proceso
         </motion.h2>
@@ -58,7 +58,7 @@ export default function ProcessTimeline() {
                   transition: { duration: 0.6, ease: 'easeOut' },
                 },
               }}
-              className={`group bg-red relative mb-12 flex flex-col items-center gap-8 md:mb-14 md:flex-row ${
+              className={`group bg-red relative mb-6 flex flex-col items-center gap-8 md:mb-2 md:flex-row ${
                 idx % 2 === 0 ? 'md:flex-row-reverse' : ''
               }`}
             >

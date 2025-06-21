@@ -41,7 +41,7 @@ export default function Hero() {
 
       {/* Gallery */}
 
-      <div className="px-6 py-12 md:px-10">
+      <div className="px-6 pb-12 md:px-10 md:pt-10">
         <div className="mb-2 flex justify-between">
           <p className="text-sm leading-relaxed md:text-base">
             Mural de las flores

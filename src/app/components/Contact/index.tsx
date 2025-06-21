@@ -19,7 +19,7 @@ export default function Contact() {
         {/* Heading */}
         <motion.h2
           variants={variants}
-          className="text-xl font-semibold md:text-2xl"
+          className="text-2xl font-semibold md:text-3xl"
         >
           ¿Listo para transformar tu espacio?
         </motion.h2>
@@ -27,7 +27,7 @@ export default function Contact() {
         {/* Subtitle */}
         <motion.p
           variants={variants}
-          className="mt-2 max-w-prose text-sm md:text-base"
+          className="mt-2 max-w-prose text-base md:text-xl"
         >
           Conversemos sobre tu proyecto.
         </motion.p>
