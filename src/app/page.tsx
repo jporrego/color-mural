@@ -9,11 +9,8 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Lightbox from './components/Lightbox';
-import Gallery from './components/Gallery';
-import FeaturedVideo from './components/FeaturedVideo';
 
 export default function Home() {
-  /* ───────────────────────────────────── modal state ───────────────────────────────────── */
   const [open, setOpen] = useState(false);
   const [activeImg, setActiveImg] = useState('/images/img1.png');
 
