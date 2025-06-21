@@ -8,6 +8,7 @@ import { createPortal } from 'react-dom';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
+
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -47,7 +48,7 @@ export default function Navbar() {
       {/* Main navbar */}
       {/* ────────────────────────────────────────── */}
       <header
-        className={`bg-background sticky top-0 z-40 shadow-sm transition-transform duration-300 ${
+        className={`bg-background sticky top-0 z-40 transition-transform duration-300 ${
           showNavbar ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
@@ -97,7 +98,9 @@ export default function Navbar() {
             />
 
             {/* Modal content */}
-            <div className="relative z-50 w-full max-w-xs rounded-2xl bg-white p-8 shadow-xl">
+            <div
+              className={`relative z-50 w-full max-w-xs rounded-2xl bg-white p-8 shadow-xl`}
+            >
               {/* Links */}
               <nav className="flex flex-col items-start gap-6 text-base tracking-wide uppercase">
                 {links.map((link) => (

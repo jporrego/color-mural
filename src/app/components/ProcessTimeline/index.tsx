@@ -26,7 +26,7 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section id="proceso" className="bg-block1/40 py-20">
+    <section id="proceso" className="bg-block1-soft py-20">
       <div className="mx-auto max-w-[1100px] px-6 md:px-10">
         {/* heading */}
         <motion.h2
