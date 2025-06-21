@@ -1,0 +1,17 @@
+/* gallery-overrides.css */
+
+.image-gallery-slide img {
+    height: 500px;
+    /* Set to whatever height you want */
+    width: 100%;
+    /* Optional: make it span the container */
+    object-fit: cover;
+    /* Ensures consistent crop */
+}
+
+.image-gallery-thumbnail img {
+    height: 80px;
+    /* Set a fixed height for thumbnails too */
+    width: 100%;
+    object-fit: cover;
+}
