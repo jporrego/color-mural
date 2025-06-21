@@ -27,9 +27,9 @@ export default function Home() {
 
       <Hero />
 
-      <ProcessTimeline />
-
       <Projects onImageClick={handleOpen} />
+
+      <ProcessTimeline />
 
       <About />
 
