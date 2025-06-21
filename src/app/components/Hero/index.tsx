@@ -26,7 +26,7 @@ export default function Hero() {
           </p>
           <a className="relative" href="#projects">
             <Image
-              src="/images/img3.jpg"
+              src="/images/benja.jpg"
               alt="Equipo Color Mural trabajando"
               width={100}
               height={100}
@@ -44,18 +44,16 @@ export default function Hero() {
       <div className="px-6 py-12 md:px-10">
         <div className="mb-2 flex justify-between">
           <p className="text-sm leading-relaxed md:text-base">
-            Restobar Santiago
+            Mural de las flores
           </p>
           <p className="text-sm leading-relaxed md:text-base">2025</p>
-          <p className="text-sm leading-relaxed md:text-base">
-            Restobar Santiago
-          </p>
+          <p className="text-sm leading-relaxed md:text-base">Santander</p>
         </div>
         <Image
-          src="/images/img2.jpg"
+          src="/images/portfolio/5-crop.jpg"
           alt="Mural de Color Mural"
           width={1000}
-          height={600}
+          height={500}
           className="w-full rounded-sm object-cover"
         />
       </div>

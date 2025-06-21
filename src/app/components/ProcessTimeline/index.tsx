@@ -5,22 +5,22 @@ const steps = [
   {
     title: 'Visita inicial',
     desc: 'Conocemos el espacio y tu visión',
-    img: '/images/img1.jpg',
+    img: '/images/process/visit.png',
   },
   {
     title: 'Propuesta y boceto',
     desc: 'Recibes un diseño conceptualizado y personalizado',
-    img: '/images/img2.jpg',
+    img: '/images/process/design.jpeg',
   },
   {
     title: 'Aprobación y producción',
     desc: 'Se agenda y ejecuta el mural',
-    img: '/images/img3.jpg',
+    img: '/images/process/production.jpg',
   },
   {
     title: 'Entrega final',
     desc: '¡Listo para ser admirado y fotografiado!',
-    img: '/images/img4.jpg',
+    img: '/images/portfolio/5-crop.jpg',
   },
 ];
 
