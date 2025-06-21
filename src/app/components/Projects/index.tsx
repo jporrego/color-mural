@@ -17,8 +17,8 @@ const imageList = [
   '8.jpeg',
   '9.jpg',
   '10.jpg',
-  '11.jpeg',
-  '12.jpeg',
+  '11.jpg',
+  '12.jpg',
 ];
 
 export default function Projects({ onImageClick }: Props) {
@@ -28,6 +28,15 @@ export default function Projects({ onImageClick }: Props) {
         <h2 className="mb-8 text-center text-2xl md:text-3xl">
           Proyectos destacados
         </h2>
+
+        <video
+          src={'/videos/color mural.mp4'}
+          loop
+          muted
+          autoPlay
+          playsInline
+          className="mb-2 w-full object-cover transition-transform duration-300"
+        />
 
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-4">
           {imageList.map((file) => {

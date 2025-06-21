@@ -87,7 +87,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Gallery */}
-      <motion.div className="px-6 pb-12 md:px-10 md:pt-10">
+      {/* <motion.div className="px-6 pb-12 md:px-10 md:pt-10">
         <div className="mb-2 flex justify-between">
           <motion.p
             animate={{ y: 0, opacity: 1 }}
@@ -127,7 +127,7 @@ export default function Hero() {
             className="w-full rounded-sm object-cover"
           />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
 
       {/* <div className="px-6 py-12 md:px-10">
         <Gallery />

@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Lightbox from './components/Lightbox';
 import Gallery from './components/Gallery';
+import FeaturedVideo from './components/FeaturedVideo';
 
 export default function Home() {
   /* ───────────────────────────────────── modal state ───────────────────────────────────── */
@@ -24,19 +25,12 @@ export default function Home() {
   return (
     <div className="text-dark flex min-h-screen flex-col scroll-smooth font-sans">
       <Navbar />
-
       <Hero />
-
-      <ProcessTimeline />
-
       <Projects onImageClick={handleOpen} />
-
+      <ProcessTimeline />
       <About />
-
       <Contact />
-
       <Footer />
-
       <Lightbox open={open} imgSrc={activeImg} onClose={() => setOpen(false)} />
     </div>
   );
