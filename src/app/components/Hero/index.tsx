@@ -9,11 +9,11 @@ export default function Hero() {
       {/* Headline block */}
       <div className="mt-4 flex items-start justify-between px-6 md:mt-24 md:px-10">
         <div className="mb-8 max-w-xl">
-          <h1 className="mb-2 text-5xl leading-none font-semibold md:text-6xl">
+          <h1 className="mb-2 text-4xl leading-none font-semibold md:text-5xl">
             COLOR MURAL
           </h1>
-          <span className="my-2 block h-px w-full bg-[#3c2e23] md:my-4" />
-          <h3 className="text-2xl leading-none md:text-3xl">
+          <span className="my-1 block h-px w-full bg-[#3c2e23]/25 md:my-4" />
+          <h3 className="text-2xl leading-none md:text-2xl">
             Murales que transforman espacios
           </h3>
         </div>

@@ -8,7 +8,7 @@ interface Props {
 
 export default function Projects({ onImageClick }: Props) {
   return (
-    <section id="projects" className="mt-8">
+    <section id="projects">
       <div className="mx-auto w-full max-w-[1000px] px-6 py-12 md:px-10">
         <h2 className="mb-8 text-2xl md:text-4xl">Proyectos destacados</h2>
 
