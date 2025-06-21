@@ -27,14 +27,14 @@ const steps = [
 export default function ProcessTimeline() {
   return (
     <section id="proceso" className="py-6 md:py-12">
-      <div className="mx-auto max-w-[1100px] px-6 md:px-10">
+      <div className="mx-auto max-w-[1000px] px-4 sm:px-6 md:px-6">
         {/* heading */}
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-10 text-center text-2xl md:text-3xl"
+          className="mb-10 text-center text-xl sm:text-2xl md:text-3xl"
         >
           Nuestro proceso
         </motion.h2>
@@ -58,43 +58,43 @@ export default function ProcessTimeline() {
                   transition: { duration: 0.6, ease: 'easeOut' },
                 },
               }}
-              className={`group bg-red relative mb-6 flex flex-col items-center gap-8 md:mb-2 md:flex-row ${
-                idx % 2 === 0 ? 'md:flex-row-reverse' : ''
+              className={`group relative mb-10 flex w-full items-center ${
+                idx % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
               }`}
             >
               {/* connector dot */}
-              <span className="absolute top-1/2 -left-1.5 z-10 hidden h-3 w-3 -translate-y-1/2 rounded-full bg-[#ff5e00] md:left-1/2 md:flex md:-translate-x-1/2"></span>
+              <span className="bg-block2 absolute top-1/2 left-1/2 z-10 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full sm:h-3 sm:w-3" />
 
               {/* text area */}
               <div
-                className={`order-2 w-full text-center md:order-1 md:w-1/2 ${
+                className={`basis-1/2 px-2 ${
                   idx % 2 === 0
-                    ? 'md:pl-12 md:text-left'
-                    : 'md:pr-12 md:text-right'
+                    ? 'pl-2 text-left md:pl-8'
+                    : 'pr-2 text-right md:pr-8'
                 }`}
               >
                 <motion.span
                   whileHover={{ scale: 1.1 }}
-                  className="bg-block1 mb-2 inline-block rounded-full px-3 py-1 text-sm font-bold tracking-widest text-[#ff5e00] uppercase"
+                  className="bg-block1 mb-1 inline-block rounded-full px-2 py-0.5 text-[10px] font-bold tracking-widest text-[#ff5e00] uppercase sm:text-xs md:mb-0"
                 >
                   {idx + 1}
                 </motion.span>
-                <div className="bg-block1-soft mx-auto w-fit rounded-sm border border-[rgba(60,46,35,0.15)] p-4 md:w-full md:border-none md:bg-transparent md:p-0">
-                  {/* title and description */}
-                  <h3 className="text-normal font-medium md:text-xl">
+
+                <div className="rounded-sm p-1 md:p-3">
+                  <h3 className="text-sm font-medium sm:text-base md:text-xl">
                     {step.title}
                   </h3>
-                  <p className="text-sm md:text-base">{step.desc}</p>
+                  <p className="text-xs sm:text-sm md:text-base">{step.desc}</p>
                 </div>
               </div>
 
               {/* image */}
               <motion.div
-                whileHover={{ scale: 1.01 }}
+                whileHover={{ scale: 1.02 }}
                 transition={{ stiffness: 150, damping: 15 }}
-                className="order-1 overflow-hidden rounded-xl shadow-xl md:order-2"
+                className="basis-1/2 px-2 sm:px-4"
               >
-                <div className="relative h-[200px] w-[250px]">
+                <div className="relative h-[110px] w-full overflow-hidden rounded-lg shadow-lg sm:h-[150px] md:h-[200px]">
                   <Image
                     src={step.img}
                     alt={`Paso ${idx + 1} - ${step.title}`}
