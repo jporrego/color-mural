@@ -33,7 +33,7 @@ export default function Contact() {
         </motion.p>
 
         {/* Contact Methods */}
-        <div className="1 mt-12 grid w-full grid-cols-3 gap-4 md:gap-6">
+        <div className="1 mt-12 grid w-full grid-cols-2 gap-4 md:gap-6">
           {/* Email */}
           <motion.a
             variants={variants}
@@ -58,22 +58,6 @@ export default function Contact() {
               <PhoneCall className="h-4 w-4 transition-transform group-hover:-translate-y-1 md:h-8 md:w-8" />
               <span className="text-xs font-medium tracking-wide md:text-base">
                 +56&nbsp;9&nbsp;1234&nbsp;5678
-              </span>
-            </div>
-          </motion.a>
-
-          {/* WhatsApp */}
-          <motion.a
-            variants={variants}
-            href="https://wa.me/56912345678?text=Hola%20Color%20Mural!"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group"
-          >
-            <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 transition-shadow group-hover:shadow-lg">
-              <MessageCircle className="h-4 w-4 transition-transform group-hover:-translate-y-1 md:h-8 md:w-8" />
-              <span className="text-xs font-medium tracking-wide md:text-base">
-                WhatsApp
               </span>
             </div>
           </motion.a>
