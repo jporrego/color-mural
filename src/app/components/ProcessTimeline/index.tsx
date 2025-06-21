@@ -41,10 +41,10 @@ export default function ProcessTimeline() {
 
         {/* timeline */}
         <motion.ul
-          variants={{ show: { transition: { staggerChildren: 0.25 } } }}
+          variants={{ show: { transition: { staggerChildren: 0.15 } } }}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="relative before:absolute before:top-0 before:left-1/2 before:h-full before:w-px before:-translate-x-1/2 before:bg-gradient-to-b before:from-transparent before:via-[#3c2e23]/30 before:to-transparent"
         >
           {steps.map((step, idx) => (
@@ -58,7 +58,7 @@ export default function ProcessTimeline() {
                   transition: { duration: 0.6, ease: 'easeOut' },
                 },
               }}
-              className={`group relative mb-12 flex flex-col items-center gap-8 md:mb-14 md:flex-row ${
+              className={`group bg-red relative mb-12 flex flex-col items-center gap-8 md:mb-14 md:flex-row ${
                 idx % 2 === 0 ? 'md:flex-row-reverse' : ''
               }`}
             >
@@ -67,7 +67,7 @@ export default function ProcessTimeline() {
 
               {/* text area */}
               <div
-                className={`order-2 w-full md:order-1 md:w-1/2 ${
+                className={`order-2 w-full text-center md:order-1 md:w-1/2 ${
                   idx % 2 === 0
                     ? 'md:pl-12 md:text-left'
                     : 'md:pr-12 md:text-right'
@@ -75,11 +75,13 @@ export default function ProcessTimeline() {
               >
                 <motion.span
                   whileHover={{ scale: 1.1 }}
-                  className="mb-2 inline-block rounded-full bg-[#ff5e00]/10 px-3 py-1 text-sm font-bold tracking-widest text-[#ff5e00] uppercase"
+                  className="bg-block1 mb-2 inline-block rounded-full px-3 py-1 text-sm font-bold tracking-widest text-[#ff5e00] uppercase"
                 >
                   {idx + 1}
                 </motion.span>
-                <h3 className="text-xl font-medium md:text-xl">{step.title}</h3>
+                <h3 className="text-normal font-medium md:text-xl">
+                  {step.title}
+                </h3>
                 <p className="text-sm text-[#3c2e23]/90 md:text-base">
                   {step.desc}
                 </p>

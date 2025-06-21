@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#3c2e23] py-6 text-xs text-[#f7f5f2] md:text-sm">
+    <footer className="bg-black py-6 text-xs text-[#f7f5f2] md:text-sm">
       <div className="mx-auto flex max-w-[1000px] flex-wrap justify-between gap-4 px-6 md:px-10">
         <p>
           © {new Date().getFullYear()} Color Mural. Todos los derechos
