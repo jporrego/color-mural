@@ -66,7 +66,7 @@ export default function Navbar() {
           </nav>
           {/* Burger icon for mobile */}
           <button
-            className="-mr-2 p-2 md:hidden" // expand hit area
+            className="-mr-2 p-2 md:hidden"
             aria-label="Open menu"
             onClick={() => setOpen(true)}
           >
@@ -102,7 +102,7 @@ export default function Navbar() {
               className={`relative z-50 w-full max-w-xs rounded-2xl bg-white p-8 shadow-xl`}
             >
               {/* Links */}
-              <nav className="flex flex-col items-start gap-6 text-base tracking-wide uppercase">
+              <nav className="flex flex-col items-center gap-6 text-base tracking-wide uppercase">
                 {links.map((link) => (
                   <a
                     key={link.href}

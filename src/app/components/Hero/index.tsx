@@ -9,7 +9,7 @@ export default function Hero() {
       className="mx-auto flex w-full max-w-[1000px] flex-col gap-10 pt-8"
     >
       {/* Headline block */}
-      <div className="mt-4 grid grid-cols-[80%_20%] px-6 md:mt-24 md:px-10">
+      <div className="mt-4 grid grid-cols-1 px-6 md:mt-24 md:grid-cols-[80%_20%] md:px-10">
         <div className="mb-8 max-w-xl">
           <h1 className="mb-2 text-4xl leading-none font-semibold md:text-5xl">
             COLOR MURAL
@@ -19,12 +19,12 @@ export default function Hero() {
             Murales que transforman espacios
           </h3>
         </div>
-        <div>
+        <div className="hidden md:block">
           <p className="text-xs leading-relaxed">
             Color Mural es un estudio de arte urbano dirigido por el artista
             Benjamin Contador.
           </p>
-          <div className="relative">
+          <a className="relative" href="#projects">
             <Image
               src="/images/img3.jpg"
               alt="Equipo Color Mural trabajando"
@@ -35,7 +35,7 @@ export default function Hero() {
             <div className="absolute bottom-2 bg-white">
               <ArrowRight className="bg-highlight h-6 w-8 text-white" />
             </div>
-          </div>
+          </a>
         </div>
       </div>
 

@@ -19,7 +19,7 @@ export default function Contact() {
         {/* Heading */}
         <motion.h2
           variants={variants}
-          className="text-2xl font-semibold md:text-3xl"
+          className="text-xl font-semibold md:text-2xl"
         >
           ¿Listo para transformar tu espacio?
         </motion.h2>
@@ -27,13 +27,13 @@ export default function Contact() {
         {/* Subtitle */}
         <motion.p
           variants={variants}
-          className="mt-4 max-w-prose text-base md:text-lg"
+          className="mt-2 max-w-prose text-sm md:text-base"
         >
           Conversemos sobre tu proyecto.
         </motion.p>
 
         {/* Contact Methods */}
-        <div className="mt-12 grid w-full grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="1 mt-12 grid w-full grid-cols-3 gap-4 md:gap-6">
           {/* Email */}
           <motion.a
             variants={variants}
@@ -41,8 +41,8 @@ export default function Contact() {
             className="group"
           >
             <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 transition-shadow group-hover:shadow-lg">
-              <Mail className="h-8 w-8 transition-transform group-hover:-translate-y-1" />
-              <span className="font-medium tracking-wide">
+              <Mail className="h-4 w-4 transition-transform group-hover:-translate-y-1 md:h-8 md:w-8" />
+              <span className="text-xs font-medium tracking-wide md:text-base">
                 hola@colormural.cl
               </span>
             </div>
@@ -55,8 +55,8 @@ export default function Contact() {
             className="group"
           >
             <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 transition-shadow group-hover:shadow-lg">
-              <PhoneCall className="h-8 w-8 transition-transform group-hover:-translate-y-1" />
-              <span className="font-medium tracking-wide">
+              <PhoneCall className="h-4 w-4 transition-transform group-hover:-translate-y-1 md:h-8 md:w-8" />
+              <span className="text-xs font-medium tracking-wide md:text-base">
                 +56&nbsp;9&nbsp;1234&nbsp;5678
               </span>
             </div>
@@ -71,8 +71,10 @@ export default function Contact() {
             className="group"
           >
             <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 transition-shadow group-hover:shadow-lg">
-              <MessageCircle className="h-8 w-8 transition-transform group-hover:-translate-y-1" />
-              <span className="font-medium tracking-wide">WhatsApp</span>
+              <MessageCircle className="h-4 w-4 transition-transform group-hover:-translate-y-1 md:h-8 md:w-8" />
+              <span className="text-xs font-medium tracking-wide md:text-base">
+                WhatsApp
+              </span>
             </div>
           </motion.a>
         </div>
