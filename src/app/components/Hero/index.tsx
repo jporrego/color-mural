@@ -1,9 +1,8 @@
-'use client';
-
 import { motion } from 'framer-motion';
 import Gallery from '../Gallery';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 // Animation presets
 const fadeUp = {
@@ -51,7 +50,7 @@ export default function Hero() {
           <motion.h3
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: -15, opacity: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             className="text-2xl leading-none italic md:text-2xl"
           >
             Murales que transforman espacios
@@ -93,7 +92,7 @@ export default function Hero() {
           <motion.p
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: -5, opacity: 0 }}
-            transition={{ duration: 0.25, delay: 1 }}
+            transition={{ duration: 0.25, delay: 0.5 }}
             className="text-sm leading-relaxed md:text-base"
           >
             Mural de las flores
@@ -101,7 +100,7 @@ export default function Hero() {
           <motion.p
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: -5, opacity: 0 }}
-            transition={{ duration: 0.25, delay: 1.25 }}
+            transition={{ duration: 0.25, delay: 0.75 }}
             className="text-sm leading-relaxed md:text-base"
           >
             2025
@@ -109,7 +108,7 @@ export default function Hero() {
           <motion.p
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: -5, opacity: 0 }}
-            transition={{ duration: 0.25, delay: 1.5 }}
+            transition={{ duration: 0.25, delay: 1 }}
             className="text-sm leading-relaxed md:text-base"
           >
             Santander
@@ -118,7 +117,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 5, opacity: 0 }}
-          transition={{ duration: 0.25, delay: 1 }}
+          transition={{ duration: 0.25, delay: 0.5 }}
         >
           <Image
             src="/images/portfolio/5-crop.jpg"
