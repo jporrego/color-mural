@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const steps = [
@@ -25,59 +26,88 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section id="proceso" className="bg-block1 mt-8">
-      <div className="mx-auto w-full max-w-[1000px] px-6 py-12 md:px-10">
-        <h2 className="mb-8 text-center font-serif text-2xl md:text-4xl">
+    <section id="proceso" className="bg-block1/40 py-20">
+      <div className="mx-auto max-w-[1100px] px-6 md:px-10">
+        {/* heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-16 text-center text-3xl font-semibold md:text-5xl"
+        >
           Nuestro proceso
-        </h2>
+        </motion.h2>
 
-        {/* Vertical timeline */}
-        <div className="relative">
-          {/* central line */}
-          <div className="absolute top-0 bottom-0 left-4 w-px bg-[#3c2e23]/20 md:left-1/2 md:-translate-x-1/2"></div>
+        {/* timeline */}
+        <motion.ul
+          variants={{ show: { transition: { staggerChildren: 0.25 } } }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative before:absolute before:top-0 before:left-1/2 before:h-full before:w-px before:-translate-x-1/2 before:bg-gradient-to-b before:from-transparent before:via-[#3c2e23]/30 before:to-transparent"
+        >
+          {steps.map((step, idx) => (
+            <motion.li
+              key={step.title}
+              variants={{
+                hidden: { opacity: 0, y: 60 },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.6, ease: 'easeOut' },
+                },
+              }}
+              className={`group relative mb-24 flex flex-col items-center gap-8 md:mb-32 md:flex-row ${
+                idx % 2 === 0 ? 'md:flex-row-reverse' : ''
+              }`}
+            >
+              {/* connector dot */}
+              <span className="absolute top-1/2 -left-1.5 z-10 hidden h-3 w-3 -translate-y-1/2 rounded-full bg-[#ff5e00] md:left-1/2 md:flex md:-translate-x-1/2"></span>
 
-          <ul className="space-y-10 md:space-y-16">
-            {steps.map((step, idx) => (
-              <li
-                key={step.title}
-                className={`group flex flex-col items-center md:flex-row ${
-                  idx % 2 === 0 ? 'md:flex-row-reverse' : ''
+              {/* text area */}
+              <div
+                className={`order-2 w-full md:order-1 md:w-1/2 ${
+                  idx % 2 === 0
+                    ? 'md:pl-12 md:text-left'
+                    : 'md:pr-12 md:text-right'
                 }`}
               >
-                {/* text block */}
-                <div
-                  className={`order-2 mt-4 w-full md:order-1 md:w-1/2 ${
-                    idx % 2 === 0
-                      ? 'md:pl-8 md:text-left'
-                      : 'md:pr-8 md:text-right'
-                  }`}
+                <motion.span
+                  whileHover={{ scale: 1.1 }}
+                  className="mb-2 inline-block rounded-full bg-[#ff5e00]/10 px-3 py-1 text-sm font-bold tracking-widest text-[#ff5e00] uppercase"
                 >
-                  <span className="mb-1 inline-block rounded-sm bg-[#ff5e00]/10 px-2 py-0.5 text-xs font-bold tracking-widest text-[#ff5e00] uppercase">
-                    {idx + 1}
-                  </span>
-                  <h3 className="font-serif text-lg md:text-xl">
-                    {step.title}
-                  </h3>
-                  <p className="mt-1 text-sm md:text-base">{step.desc}</p>
-                </div>
+                  {idx + 1}
+                </motion.span>
+                <h3 className="text-xl font-medium md:text-2xl">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-base text-[#3c2e23]/90 md:text-lg">
+                  {step.desc}
+                </p>
+              </div>
 
-                {/* image block */}
-                <div className="order-1 w-full overflow-hidden rounded-sm shadow-lg md:order-2 md:w-1/2">
-                  <div className="relative aspect-[16/9] w-full transition-transform duration-500 group-hover:scale-105">
-                    <Image
-                      src={step.img}
-                      alt={`Paso ${idx + 1} - ${step.title}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      priority
-                    />
-                  </div>
+              {/* image */}
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                transition={{ stiffness: 150, damping: 15 }}
+                className="order-1 w-full overflow-hidden rounded-xl shadow-xl md:order-2 md:w-1/2"
+              >
+                <div className="relative aspect-[16/9] w-full">
+                  <Image
+                    src={step.img}
+                    alt={`Paso ${idx + 1} - ${step.title}`}
+                    fill
+                    quality={80}
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={idx === 0}
+                  />
                 </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+              </motion.div>
+            </motion.li>
+          ))}
+        </motion.ul>
       </div>
     </section>
   );

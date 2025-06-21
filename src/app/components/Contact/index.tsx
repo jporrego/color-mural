@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section id="contacto" className="py-16">
       <div className="mx-auto flex max-w-[600px] flex-col items-center gap-6 px-6 text-center md:px-0">
-        <h2 className="font-serif text-2xl md:text-4xl">
+        <h2 className="text-2xl md:text-4xl">
           ¿Listo para transformar tu espacio?
         </h2>
         <p className="max-w-prose text-sm md:text-base">
