@@ -6,6 +6,10 @@
     object-fit: cover;
 }
 
+.image-gallery-slides {
+    touch-action: auto !important;
+}
+
 .image-gallery-thumbnail img {
     height: 80px;
     width: 100%;
