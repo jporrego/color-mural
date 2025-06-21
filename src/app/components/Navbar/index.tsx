@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { createPortal } from 'react-dom';
 
@@ -7,11 +7,36 @@ import { createPortal } from 'react-dom';
  */
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < 350) {
+        setShowNavbar(true);
+      } else if (currentScrollY < lastScrollY.current) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const links = [
     { href: '#inicio', label: 'Inicio' },
-    { href: '#portafolio', label: 'Portafolio' },
+
     { href: '#proceso', label: 'Proceso' },
+    { href: '#projects', label: 'Proyectos' },
     { href: '#sobre', label: 'Sobre\u00a0nosotros' },
     { href: '#contacto', label: 'Contacto' },
   ];
@@ -21,7 +46,11 @@ export default function Navbar() {
       {/* ────────────────────────────────────────── */}
       {/* Main navbar */}
       {/* ────────────────────────────────────────── */}
-      <header className="bg-background sticky top-0 z-40 shadow-sm">
+      <header
+        className={`bg-background sticky top-0 z-40 shadow-sm transition-transform duration-300 ${
+          showNavbar ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
         <div className="mx-auto flex w-full max-w-[1000px] items-center justify-between px-6 py-4 text-xs tracking-wide uppercase md:px-10 md:text-sm">
           {/* Desktop navigation */}
           <nav className="hidden gap-2 md:flex">

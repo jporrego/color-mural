@@ -79,12 +79,13 @@ export default function ProcessTimeline() {
                 >
                   {idx + 1}
                 </motion.span>
-                <h3 className="text-normal font-medium md:text-xl">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-[#3c2e23]/90 md:text-base">
-                  {step.desc}
-                </p>
+                <div className="bg-block1-soft mx-auto w-fit rounded-sm border border-[rgba(60,46,35,0.15)] p-4 md:w-full md:border-none md:bg-transparent md:p-0">
+                  {/* title and description */}
+                  <h3 className="text-normal font-medium md:text-xl">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm md:text-base">{step.desc}</p>
+                </div>
               </div>
 
               {/* image */}

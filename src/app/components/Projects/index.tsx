@@ -6,11 +6,11 @@ interface Props {
   onImageClick: (src: string) => void;
 }
 
-export default function Portfolio({ onImageClick }: Props) {
+export default function Projects({ onImageClick }: Props) {
   return (
-    <section id="portafolio" className="mt-8">
+    <section id="projects" className="mt-8">
       <div className="mx-auto w-full max-w-[1000px] px-6 py-12 md:px-10">
-        <h2 className="mb-8 text-2xl md:text-4xl">Portafolio</h2>
+        <h2 className="mb-8 text-2xl md:text-4xl">Proyectos destacados</h2>
 
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-4">
           {[...Array(9)].map((_, idx) => {
