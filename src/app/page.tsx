@@ -13,12 +13,34 @@ export default function Home() {
     setOpen(true);
   };
 
+  /* ───────────────────────────────────── process data ───────────────────────────────────── */
+  const processSteps = [
+    {
+      title: 'Visita inicial',
+      desc: 'Conocemos el espacio y tu visión',
+      img: '/images/img1.jpg',
+    },
+    {
+      title: 'Propuesta y boceto',
+      desc: 'Recibes un diseño conceptualizado y personalizado',
+      img: '/images/img2.jpg',
+    },
+    {
+      title: 'Aprobación y producción',
+      desc: 'Se agenda y ejecuta el mural',
+      img: '/images/img3.jpg',
+    },
+    {
+      title: 'Entrega final',
+      desc: '¡Listo para ser admirado y fotografiado!',
+      img: '/images/img4.jpg',
+    },
+  ];
+
   return (
     <div className="text-dark flex min-h-screen flex-col scroll-smooth font-sans">
       {/* ─────────────── Top Navigation ─────────────── */}
       <div className="relative isolate">
-        {/* <div className="absolute inset-0 -z-10 bg-[url('/images/img1.jpg')] bg-cover bg-center bg-no-repeat" />
-        <div className="absolute inset-0 -z-10 bg-black/40" /> */}
         <header className="mx-auto flex w-full max-w-[1000px] items-center justify-between px-6 py-4 text-xs tracking-wide uppercase md:px-10 md:text-sm">
           <nav className="flex flex-wrap items-center gap-2 md:gap-4">
             <a href="#inicio" className="hover:underline">
@@ -70,76 +92,67 @@ export default function Home() {
               Agenda tu proyecto
             </a>
           </div>
-          {/* Featured project */}
 
-          {/* <div className="px-6 md:px-10">
-            <div className="mb-2 flex justify-between text-[11px] tracking-wider uppercase md:text-xs">
-              <span>Último proyecto</span>
-              <span>2024</span>
-              <span>Restobar&nbsp;Santiago</span>
-            </div>
-            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-sm">
-              <Image
-                src="/images/img2.jpg"
-                alt="Mural reciente pintado por Color Mural"
-                fill
-                priority
-                className="object-cover"
-              />
-            </div>
-          </div> */}
+          {/* Gallery */}
+          <div className="mx-auto w-full max-w-[1024px] px-6 py-12 md:px-10">
+            <Gallery />
+          </div>
         </section>
-        <div className="mx-auto w-full max-w-[1024px] px-6 py-12 md:px-10">
-          <Gallery />
-        </div>
       </div>
 
       {/* ─────────────── Process Section ─────────────── */}
       <section id="proceso" className="bg-block1 mt-8">
-        <div className="mx-auto grid w-full max-w-[1000px] grid-cols-1 gap-8 px-6 py-12 md:grid-cols-2 md:px-10">
-          {/* Left: text */}
-          <div>
-            <h2 className="mb-6 font-serif text-2xl md:text-4xl">
-              Así trabajamos
-            </h2>
-            <div className="grid grid-cols-1 gap-x-12 gap-y-6 text-sm md:grid-cols-2 md:text-base">
-              <div>
-                <p className="font-bold">1. Visita inicial</p>
-                <p>Conocemos el espacio y tu visión</p>
-              </div>
-              <div>
-                <p className="font-bold">2. Propuesta y boceto</p>
-                <p>Recibes un diseño conceptualizado y personalizado</p>
-              </div>
-              <div>
-                <p className="font-bold">3. Aprobación y producción</p>
-                <p>Se agenda y ejecuta el mural</p>
-              </div>
-              <div>
-                <p className="font-bold">4. Entrega final</p>
-                <p>¡Listo para ser admirado y fotografiado!</p>
-              </div>
-            </div>
-          </div>
+        <div className="mx-auto w-full max-w-[1000px] px-6 py-10 md:px-10">
+          <h2 className="mb-6 text-center font-serif text-2xl md:text-4xl">
+            Nuestro proceso
+          </h2>
 
-          {/* Right: image grid */}
-          <div className="mx-auto grid aspect-[4/3] w-full max-w-[500px] grid-cols-2 grid-rows-2 gap-1 overflow-hidden rounded-sm">
-            {[
-              '/images/img1.jpg',
-              '/images/img2.jpg',
-              '/images/img3.jpg',
-              '/images/img4.jpg',
-            ].map((src) => (
-              <Image
-                key={src}
-                src={src}
-                alt="Proceso Color Mural"
-                width={500}
-                height={300}
-                className="h-full w-full object-cover"
-                priority
-              />
-            ))}
+          {/* Vertical timeline */}
+          <div className="relative">
+            {/* central line for desktop */}
+            <div className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-[#3c2e23]/20 md:block"></div>
+
+            <ul className="space-y-8 md:space-y-12">
+              {processSteps.map((step, idx) => (
+                <li
+                  key={step.title}
+                  className={`group flex items-center gap-4 ${
+                    idx % 2 === 0 ? 'flex-row-reverse' : ''
+                  }`}
+                >
+                  {/* image block */}
+                  <div className="flex-shrink-0 basis-28 overflow-hidden rounded-sm shadow-lg sm:basis-36 md:basis-1/2">
+                    <div className="relative aspect-[4/3] w-full transition-transform duration-500 group-hover:scale-105">
+                      <Image
+                        src={step.img}
+                        alt={`Paso ${idx + 1} - ${step.title}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 112px, 50vw"
+                        priority
+                      />
+                    </div>
+                  </div>
+
+                  {/* text block */}
+                  <div
+                    className={`flex-1 ${
+                      idx % 2 === 0 ? 'text-left md:pl-8' : 'text-right md:pr-8'
+                    }`}
+                  >
+                    <span className="mb-1 inline-block rounded-sm bg-[#ff5e00]/10 px-2 py-0.5 text-xs font-bold tracking-widest text-[#ff5e00] uppercase">
+                      {idx + 1}
+                    </span>
+                    <h3 className="font-serif text-base sm:text-lg md:text-xl">
+                      {step.title}
+                    </h3>
+                    <p className="mt-1 text-xs sm:text-sm md:text-base">
+                      {step.desc}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -205,7 +218,7 @@ export default function Home() {
           </h2>
           <p className="max-w-prose text-sm md:text-base">
             Escríbenos y conversemos sobre tu proyecto. Responderemos en menos
-            de 24&nbsp;horas.
+            de 24 horas.
           </p>
           <a
             href="mailto:hola@colormural.cl"
