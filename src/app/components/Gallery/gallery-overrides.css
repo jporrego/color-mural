@@ -1,17 +1,37 @@
 /* gallery-overrides.css */
 
 .image-gallery-slide img {
-    height: 500px;
-    /* Set to whatever height you want */
+    height: 400px;
     width: 100%;
-    /* Optional: make it span the container */
     object-fit: cover;
-    /* Ensures consistent crop */
 }
 
 .image-gallery-thumbnail img {
     height: 80px;
-    /* Set a fixed height for thumbnails too */
     width: 100%;
     object-fit: cover;
+}
+
+/* Responsive override for smaller screens */
+@media (max-width: 768px) {
+    .image-gallery-slide img {
+        height: 300px;
+        /* Adjust as needed for small screens */
+    }
+
+    .image-gallery-thumbnail img {
+        height: 60px;
+        /* Optional: slightly smaller thumbnails */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery-slide img {
+        height: 200px;
+        /* Even smaller for very small screens */
+    }
+
+    .image-gallery-thumbnail img {
+        height: 50px;
+    }
 }

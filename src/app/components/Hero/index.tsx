@@ -28,9 +28,9 @@ export default function Hero() {
       </div>
 
       {/* Gallery */}
-      {/* <div className="mx-auto w-full max-w-[1024px] bg-black px-6 py-12 md:px-10">
+      <div className="px-6 py-12 md:px-10">
         <Gallery />
-      </div> */}
+      </div>
     </section>
   );
 }

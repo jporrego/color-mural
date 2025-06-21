@@ -23,32 +23,20 @@ export default function Home() {
 
   return (
     <div className="text-dark flex min-h-screen flex-col scroll-smooth font-sans">
-      {/* ─────────────── Top Navigation ─────────────── */}
       <Navbar />
 
-      {/* ─────────────── Hero Section ─────────────── */}
       <Hero />
-      <div className="">
-        <div className="mx-auto w-full max-w-[1024px] px-6 py-12 md:px-10">
-          <Gallery />
-        </div>
-      </div>
-      {/* ─────────────── Process Section ─────────────── */}
+
       <ProcessTimeline />
 
-      {/* ─────────────── Portfolio Section ─────────────── */}
       <Portfolio onImageClick={handleOpen} />
 
-      {/* ─────────────── About Section ─────────────── */}
       <About />
 
-      {/* ─────────────── Contact Section ─────────────── */}
       <Contact />
 
-      {/* ─────────────── Footer ─────────────── */}
       <Footer />
 
-      {/* ─────────────── Lightbox Modal ─────────────── */}
       <Lightbox open={open} imgSrc={activeImg} onClose={() => setOpen(false)} />
     </div>
   );

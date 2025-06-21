@@ -7,7 +7,6 @@ const images = [
     original: 'images/portfolio/1.jpg',
     description: 'Restobar Santiago - 2024',
     thumbnail: 'images/portfolio/1.jpg',
-    sizes: '10px',
   },
   {
     original: 'images/portfolio/2.jpg',
