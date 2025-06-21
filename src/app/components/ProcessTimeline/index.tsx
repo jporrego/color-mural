@@ -34,7 +34,7 @@ export default function ProcessTimeline() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16 text-center text-3xl font-semibold md:text-5xl"
+          className="mb-12 text-center text-xl font-semibold md:text-2xl"
         >
           Nuestro proceso
         </motion.h2>
@@ -58,7 +58,7 @@ export default function ProcessTimeline() {
                   transition: { duration: 0.6, ease: 'easeOut' },
                 },
               }}
-              className={`group relative mb-24 flex flex-col items-center gap-8 md:mb-32 md:flex-row ${
+              className={`group relative mb-12 flex flex-col items-center gap-8 md:mb-14 md:flex-row ${
                 idx % 2 === 0 ? 'md:flex-row-reverse' : ''
               }`}
             >
@@ -79,10 +79,8 @@ export default function ProcessTimeline() {
                 >
                   {idx + 1}
                 </motion.span>
-                <h3 className="text-xl font-medium md:text-2xl">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-base text-[#3c2e23]/90 md:text-lg">
+                <h3 className="text-xl font-medium md:text-xl">{step.title}</h3>
+                <p className="text-sm text-[#3c2e23]/90 md:text-base">
                   {step.desc}
                 </p>
               </div>
@@ -91,16 +89,15 @@ export default function ProcessTimeline() {
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ stiffness: 150, damping: 15 }}
-                className="order-1 w-full overflow-hidden rounded-xl shadow-xl md:order-2 md:w-1/2"
+                className="order-1 overflow-hidden rounded-xl shadow-xl md:order-2"
               >
-                <div className="relative aspect-[16/9] w-full">
+                <div className="relative h-[200px] w-[250px]">
                   <Image
                     src={step.img}
                     alt={`Paso ${idx + 1} - ${step.title}`}
                     fill
-                    quality={80}
+                    quality={70}
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
                     priority={idx === 0}
                   />
                 </div>
