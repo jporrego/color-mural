@@ -21,34 +21,34 @@ export default function Navbar() {
       {/* ────────────────────────────────────────── */}
       {/* Main navbar */}
       {/* ────────────────────────────────────────── */}
-      <header className="mx-auto flex w-full max-w-[1000px] items-center justify-between px-6 py-4 text-xs tracking-wide uppercase md:px-10 md:text-sm">
-        {/* Desktop navigation */}
-        <nav className="hidden gap-2 md:flex">
-          {links.map((link, idx) => (
-            <div key={link.href} className="flex gap-2">
-              <a href={link.href} className="hover:underline">
-                {link.label}
-              </a>
-              {idx < links.length - 1 && <span>/</span>}
-            </div>
-          ))}
-        </nav>
-
-        {/* Burger icon for mobile */}
-        <button
-          className="-mr-2 p-2 md:hidden" // expand hit area
-          aria-label="Open menu"
-          onClick={() => setOpen(true)}
-        >
-          <Menu className="size-6" />
-        </button>
-
-        <a
-          href="#contacto"
-          className="bg-block3 hover:bg-block4-hover self-center rounded-sm px-3 py-2 text-xs font-bold tracking-wider uppercase transition-colors"
-        >
-          Agenda tu proyecto
-        </a>
+      <header className="bg-background sticky top-0 z-40 shadow-sm">
+        <div className="mx-auto flex w-full max-w-[1000px] items-center justify-between px-6 py-4 text-xs tracking-wide uppercase md:px-10 md:text-sm">
+          {/* Desktop navigation */}
+          <nav className="hidden gap-2 md:flex">
+            {links.map((link, idx) => (
+              <div key={link.href} className="flex gap-2">
+                <a href={link.href} className="hover:underline">
+                  {link.label}
+                </a>
+                {idx < links.length - 1 && <span>/</span>}
+              </div>
+            ))}
+          </nav>
+          {/* Burger icon for mobile */}
+          <button
+            className="-mr-2 p-2 md:hidden" // expand hit area
+            aria-label="Open menu"
+            onClick={() => setOpen(true)}
+          >
+            <Menu className="size-6" />
+          </button>
+          <a
+            href="#contacto"
+            className="bg-block3 hover:bg-block4-hover self-center rounded-sm px-3 py-2 text-xs font-bold tracking-wider uppercase transition-colors"
+          >
+            Agenda tu proyecto
+          </a>
+        </div>
       </header>
 
       {/* ────────────────────────────────────────── */}
