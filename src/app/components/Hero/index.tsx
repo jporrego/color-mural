@@ -51,7 +51,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: -15, opacity: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-2xl leading-none italic md:text-2xl"
+            className="mb-6 text-center text-xl leading-none italic md:mb-0 md:text-left md:text-2xl"
           >
             Murales que transforman espacios
           </motion.h3>
