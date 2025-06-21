@@ -62,24 +62,19 @@ export default function ProcessTimeline() {
                 idx % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
               }`}
             >
-              {/* connector dot */}
-              <span className="bg-block2 absolute top-1/2 left-1/2 z-10 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full sm:h-3 sm:w-3" />
+              {/* connector dot with step number inside */}
+              <span className="bg-highlight absolute top-1/2 left-1/2 z-10 flex h-4 w-4 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-xs font-bold text-white md:h-5 md:w-5">
+                {idx + 1}
+              </span>
 
               {/* text area */}
               <div
                 className={`basis-1/2 px-2 ${
                   idx % 2 === 0
-                    ? 'pl-2 text-left md:pl-8'
-                    : 'pr-2 text-right md:pr-8'
+                    ? 'pl-4 text-left md:pl-8'
+                    : 'pr-4 text-right md:pr-8'
                 }`}
               >
-                <motion.span
-                  whileHover={{ scale: 1.1 }}
-                  className="bg-block1 mb-1 inline-block rounded-full px-2 py-0.5 text-[10px] font-bold tracking-widest text-[#ff5e00] uppercase sm:text-xs md:mb-0"
-                >
-                  {idx + 1}
-                </motion.span>
-
                 <div className="rounded-sm p-1 md:p-3">
                   <h3 className="text-sm font-medium sm:text-base md:text-xl">
                     {step.title}
@@ -92,7 +87,7 @@ export default function ProcessTimeline() {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ stiffness: 150, damping: 15 }}
-                className="basis-1/2 px-2 sm:px-4"
+                className="basis-1/2 px-4"
               >
                 <div className="relative h-[110px] w-full overflow-hidden rounded-lg shadow-lg sm:h-[150px] md:h-[200px]">
                   <Image
