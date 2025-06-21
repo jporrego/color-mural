@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#3c2e23] font-sans">
+    <div className="min-h-screen flex flex-col text-dark font-sans">
       {/* ─────────────── Top Navigation ─────────────── */}
       <header className="max-w-[1000px] w-full mx-auto flex justify-between items-center px-6 md:px-10 py-4 text-xs md:text-sm tracking-wide uppercase">
         <nav className="flex flex-wrap items-center gap-2 md:gap-4">
@@ -40,19 +40,13 @@ export default function Home() {
         <div className="flex justify-between items-start mt-4 md:mt-24 px-6 md:px-10">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl leading-none font-serif mb-2">
-              Color Mural
+              COLOR MURAL
             </h1>
+            <span className="block w-full h-px bg-[#3c2e23] my-2 md:my-4"></span>
             <h3 className="text-2xl md:text-4xl leading-none font-serif">
               Murales que transforman espacios
             </h3>
           </div>
-          {/* <h1 className="text-5xl md:text-7xl leading-none font-serif">
-            Murales
-            <br />
-            <span className="block pl-2 md:pl-4">que</span>
-            <span className="block w-full h-px bg-[#3c2e23] my-4 md:my-6"></span>
-            transforman&nbsp;espacios
-          </h1> */}
 
           {/* CTA link */}
           <a
@@ -61,23 +55,6 @@ export default function Home() {
           >
             Agenda tu proyecto
           </a>
-
-          {/* Blurb + thumbnail */}
-          {/* <div className="md:col-start-3 flex md:flex-col items-center gap-4 max-w-xs">
-            <div className="w-12 h-12 min-w-[3rem] md:w-20 md:h-20 overflow-hidden rounded-sm">
-              <Image
-                src="/images/img1.png"
-                alt="Miniatura de mural"
-                width={80}
-                height={80}
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <p className="text-[11px] md:text-xs leading-relaxed">
-              Creamos murales a medida que convierten muros comunes en hitos
-              visuales para tu marca y tu comunidad — un muro a la vez.
-            </p>
-          </div> */}
         </div>
 
         {/* Featured project */}
@@ -98,36 +75,36 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="metodos" className="bg-[#FEF0DE] mt-4 md:mt-8">
+      <section id="metodos" className="bg-block1 mt-4 md:mt-8 ">
         <div className="max-w-[1000px] w-full mx-auto py-12 px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left: text */}
           <div>
-            <h2 className="text-2xl md:text-4xl font-serif mb-6">
+            <h2 className="text-2xl md:text-4xl font-serif mb-6 ">
               Así trabajamos
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 text-sm md:text-base">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 text-sm md:text-base ">
               <div>
-                <p className="font-bold">1 Visita inicial</p>
-                <p className="text-gray-700">
+                <p className="font-bold">1. Visita inicial</p>
+                <p className="">
                   Conocemos el espacio
                   <br />y tu visión
                 </p>
               </div>
               <div>
-                <p className="font-bold">2 Propuesta y boceto</p>
-                <p className="text-gray-700">
+                <p className="font-bold">2. Propuesta y boceto</p>
+                <p className="">
                   Recibes un diseño conceptualizado
                   <br />
                   personalizado
                 </p>
               </div>
               <div>
-                <p className="font-bold">3 Aprobación y producción</p>
-                <p className="text-gray-700">Se agenda y ejecuta el mural</p>
+                <p className="font-bold">3. Aprobación y producción</p>
+                <p className="">Se agenda y ejecuta el mural</p>
               </div>
               <div>
-                <p className="font-bold">4 Entrega final</p>
-                <p className="text-gray-700">
+                <p className="font-bold">4. Entrega final</p>
+                <p className="">
                   ¡Listo para ser esamriado
                   <br />
                   (y fotografiado)!
