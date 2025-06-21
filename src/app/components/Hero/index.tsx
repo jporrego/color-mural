@@ -9,9 +9,9 @@ export default function Hero() {
       className="mx-auto flex w-full max-w-[1000px] flex-col gap-10 pt-8"
     >
       {/* Headline block */}
-      <div className="mt-4 grid grid-cols-1 px-6 md:mt-24 md:grid-cols-[80%_20%] md:px-10">
+      <div className="mt-4 grid grid-cols-1 gap-4 px-6 md:mt-16 md:grid-cols-[80%_20%] md:px-10">
         <div className="mb-8 max-w-xl">
-          <h1 className="mb-2 text-4xl leading-none font-semibold md:text-5xl">
+          <h1 className="font-dm-serif mb-2 text-4xl leading-none md:text-5xl">
             COLOR MURAL
           </h1>
           <span className="my-1 block h-px w-full bg-[#3c2e23]/25 md:my-4" />
