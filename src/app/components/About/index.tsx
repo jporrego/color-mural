@@ -17,7 +17,7 @@ export default function About() {
 
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm">
           <Image
-            src="/images/about.png"
+            src="/images/about.jpg"
             alt="Equipo Color Mural trabajando"
             fill
             className="object-cover"
