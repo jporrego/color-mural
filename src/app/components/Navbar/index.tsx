@@ -74,7 +74,7 @@ export default function Navbar() {
           </button>
           <a
             href="#contacto"
-            className="bg-block3 hover:bg-block4-hover self-center rounded-sm px-3 py-2 text-xs font-bold tracking-wider uppercase transition-colors"
+            className="bg-highlight hover:bg-block4-hover self-center rounded-sm px-3 py-2 text-xs font-bold tracking-wider text-white uppercase transition-colors"
           >
             Agenda tu proyecto
           </a>
