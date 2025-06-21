@@ -23,7 +23,7 @@ const imageList = [
 
 export default function Projects({ onImageClick }: Props) {
   return (
-    <section id="projects" className="py-12">
+    <section id="projects" className="bg-block1-soft py-12">
       <div className="mx-auto w-full max-w-[1000px] px-6 md:px-10">
         <h2 className="mb-8 text-center text-2xl md:text-3xl">
           Proyectos destacados
