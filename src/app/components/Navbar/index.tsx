@@ -42,31 +42,30 @@ export default function Navbar() {
         className={`pointer-events-auto fixed inset-x-0 top-0 z-40 transition-all duration-300 ${show ? 'translate-y-0' : '-translate-y-full'} ${solid ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'} `}
       >
         <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between px-6 py-6 text-white">
-          <div>
+          <div className="flex items-center gap-4">
             <Paintbrush className="mr-2 size-10" />
-          </div>
-          {/* Left: contact lines (desktop only) */}
-          <div className="hidden gap-4 text-[10px] leading-snug lg:flex">
-            <p className="flex flex-col gap-1 text-xs">
-              Contacto:
-              <a
-                href="mailto:info@colormural.cl"
-                className="hover:text-highlight underline"
-              >
-                info@colormural.cl
-              </a>
-            </p>
-            <p className="mr-4 flex flex-col gap-1 text-xs">
-              Instagram:
-              <a
-                href="https://www.instagram.com/colormural/"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-highlight underline"
-              >
-                @colormural
-              </a>
-            </p>
+            <div className="hidden gap-4 text-[10px] leading-snug lg:flex">
+              <p className="flex flex-col gap-1 text-xs">
+                Contacto:
+                <a
+                  href="mailto:info@colormural.cl"
+                  className="hover:text-highlight underline"
+                >
+                  info@colormural.cl
+                </a>
+              </p>
+              <p className="mr-4 flex flex-col gap-1 text-xs">
+                Instagram:
+                <a
+                  href="https://www.instagram.com/colormural/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-highlight underline"
+                >
+                  @colormural
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* Centre: nav links (desktop) */}

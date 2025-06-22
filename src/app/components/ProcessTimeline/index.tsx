@@ -28,12 +28,8 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section
-      id="proceso"
-      /* solid black + faint circles for depth */
-      className="relative overflow-hidden py-24 text-white"
-    >
-      <div className="pointer-events-none absolute inset-x-0 -top-40 -z-10 h-full overflow-hidden">
+    <section id="proceso" className="relative overflow-hidden py-24 text-white">
+      <div className="overflow-repeat pointer-events-none absolute inset-x-0 -top-20 -z-10 h-full">
         <Image
           src="/images/portfolio/1.webp"
           alt=""

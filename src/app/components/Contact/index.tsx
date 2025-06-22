@@ -11,7 +11,7 @@ export default function Contact() {
     <section
       id="contacto"
       /* black canvas + faint glow to echo the rest of the site */
-      className="relative overflow-hidden bg-black py-24 text-white"
+      className="bg-primary relative overflow-hidden py-24 text-white"
     >
       {/* blue halo decor */}
       <div className="pointer-events-none absolute -top-72 -right-72 h-[400px] w-[400px] rounded-full bg-[#2343FF]/20 blur-[140px]" />
@@ -30,8 +30,7 @@ export default function Contact() {
           variants={variants}
           className="text-3xl font-semibold md:text-4xl"
         >
-          <span className="text-[#2343FF]">¿Listo</span> para transformar tu
-          espacio?
+          ¿Listo para transformar tu espacio?
         </motion.h2>
 
         {/* Subtitle */}
@@ -51,7 +50,7 @@ export default function Contact() {
             className="group"
           >
             <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-white/5 p-8 backdrop-blur-md transition hover:shadow-2xl hover:shadow-[#2343FF]/30">
-              <Mail className="h-8 w-8 text-[#2343FF] transition-transform group-hover:-translate-y-1" />
+              <Mail className="h-8 w-8 text-white/60 transition-transform group-hover:-translate-y-1" />
               <span className="text-sm font-medium tracking-wide md:text-base">
                 hola@colormural.cl
               </span>
@@ -65,7 +64,7 @@ export default function Contact() {
             className="group"
           >
             <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-white/5 p-8 backdrop-blur-md transition hover:shadow-2xl hover:shadow-[#2343FF]/30">
-              <PhoneCall className="h-8 w-8 text-[#2343FF] transition-transform group-hover:-translate-y-1" />
+              <PhoneCall className="h-8 w-8 text-white/60 transition-transform group-hover:-translate-y-1" />
               <span className="text-sm font-medium tracking-wide md:text-base">
                 +56&nbsp;9&nbsp;1234&nbsp;5678
               </span>
