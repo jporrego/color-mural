@@ -17,7 +17,7 @@ export default function Hero() {
       animate="show"
       variants={container}
       /* Full-screen hero, positions everything at the bottom */
-      className="relative isolate flex h-screen w-full flex-col justify-end overflow-hidden"
+      className="relative isolate flex h-screen w-full flex-col justify-start overflow-hidden pt-40 md:justify-end md:pt-0"
     >
       {/* ── Background ─────────────────────────────────────────────── */}
       <video
@@ -33,7 +33,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-9 bg-black/45 backdrop-brightness-[.65]" />
 
       {/* ── Text block ─────────────────────────────────────────────── */}
-      <div className="mx-auto w-full max-w-7xl px-6 pb-20 md:px-8">
+      <div className="mx-auto w-full max-w-7xl px-6 pb-20">
         {/* Headline row */}
         <motion.div
           variants={container}
@@ -46,7 +46,9 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="text-[clamp(48px,10vw,100px)] leading-[0.85] font-semibold text-white"
           >
-            COLOR MURAL
+            COLOR
+            <br />
+            MURAL
           </motion.h1>
 
           {/* Tag-line (wraps under larger screens) */}
@@ -66,11 +68,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 flex flex-col gap-4 md:flex-row"
+          className="mt-32 flex flex-col gap-4 md:mt-12 md:flex-row"
         >
           <a
             href="#contacto"
-            className="inline-block rounded-full bg-[#2343FF] px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#1232f5] md:text-base"
+            className="inline-block w-fit rounded-full bg-[#2343FF] px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#1232f5] md:text-base"
           >
             Solicita una propuesta
           </a>
@@ -78,7 +80,7 @@ export default function Hero() {
           {/* secondary CTA sits flush right on ≥md screens */}
           <a
             href="#agenda"
-            className="inline-block rounded-full border border-white/50 px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-white/10 md:ml-auto md:text-base"
+            className="inline-block w-fit rounded-full border border-white/50 px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-white/10 md:ml-auto md:text-base"
           >
             Conversa con nosotros
           </a>
