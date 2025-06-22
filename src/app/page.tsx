@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="text-dark flex min-h-screen flex-col scroll-smooth font-sans">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Projects onImageClick={handleOpen} />
       <ProcessTimeline />

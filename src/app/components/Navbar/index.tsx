@@ -47,7 +47,7 @@ export default function Navbar() {
       {/* Main navbar */}
       {/* ────────────────────────────────────────── */}
       <header
-        className={`bg-background sticky top-0 z-40 transition-transform duration-300 ${
+        className={`sticky top-0 z-40 bg-transparent transition-transform duration-300 ${
           showNavbar ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
