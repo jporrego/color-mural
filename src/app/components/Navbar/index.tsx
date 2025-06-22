@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Paintbrush } from 'lucide-react';
 import { createPortal } from 'react-dom';
 
 export default function Navbar() {
@@ -41,11 +41,14 @@ export default function Navbar() {
       <header
         className={`pointer-events-auto fixed inset-x-0 top-0 z-40 transition-all duration-300 ${show ? 'translate-y-0' : '-translate-y-full'} ${solid ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'} `}
       >
-        <div className="mx-auto flex w-full max-w-7xl items-start justify-between px-6 py-4 text-white">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 text-white">
+          <div>
+            <Paintbrush className="mr-2 size-10" />
+          </div>
           {/* Left: contact lines (desktop only) */}
-          <div className="hidden text-[10px] leading-snug md:block">
-            <p>
-              Contacto:{' '}
+          <div className="hidden gap-4 text-[10px] leading-snug lg:flex">
+            <p className="flex flex-col gap-1 text-xs">
+              Contacto:
               <a
                 href="mailto:info@colormural.cl"
                 className="hover:text-highlight underline"
@@ -53,8 +56,8 @@ export default function Navbar() {
                 info@colormural.cl
               </a>
             </p>
-            <p>
-              Instagram:&nbsp;
+            <p className="mr-4 flex flex-col gap-1 text-xs">
+              Instagram:
               <a
                 href="https://www.instagram.com/colormural/"
                 target="_blank"
@@ -84,7 +87,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right: burger (mobile) + CTA (desktop) */}
-          <div className="flex items-center gap-4">
+          <div className="ml-auto flex items-center gap-4 md:ml-0">
             {/* CTA — hidden on < md so the burger stays visible */}
             <a
               href="#contacto"
@@ -95,7 +98,7 @@ export default function Navbar() {
 
             {/* Burger */}
             <button
-              className="self-end p-2"
+              className="block p-2 md:hidden"
               aria-label="Abrir menú"
               onClick={() => setOpen(true)}
             >
