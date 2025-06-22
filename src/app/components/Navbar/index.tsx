@@ -41,7 +41,7 @@ export default function Navbar() {
       <header
         className={`pointer-events-auto fixed inset-x-0 top-0 z-40 transition-all duration-300 ${show ? 'translate-y-0' : '-translate-y-full'} ${solid ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'} `}
       >
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 text-white">
+        <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between px-6 py-6 text-white">
           <div>
             <Paintbrush className="mr-2 size-10" />
           </div>

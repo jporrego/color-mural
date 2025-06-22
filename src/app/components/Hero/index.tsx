@@ -33,7 +33,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-9 bg-black/45 backdrop-brightness-[.65]" />
 
       {/* ── Text block ─────────────────────────────────────────────── */}
-      <div className="mx-auto w-full max-w-7xl px-6 pb-20">
+      <div className="mx-auto w-full max-w-[1920px] px-6 pb-20">
         {/* Headline row */}
         <motion.div
           variants={container}
@@ -72,7 +72,7 @@ export default function Hero() {
         >
           <a
             href="#contacto"
-            className="inline-block w-fit rounded-full bg-[#2343FF] px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#1232f5] md:text-base"
+            className="bg-primary inline-block w-fit rounded-full px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#1232f5] md:text-base"
           >
             Solicita una propuesta
           </a>

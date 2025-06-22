@@ -48,15 +48,18 @@ export default function ProcessTimeline() {
       <div className="pointer-events-none absolute top-[300px] left-1/2 h-[1800px] w-[1800px] -translate-x-1/2 rounded-full border border-white/5" />
       <div className="mx-auto max-w-[1000px] px-6">
         {/* heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-16 text-center text-3xl font-semibold md:text-4xl"
-        >
-          Nuestro<span className="text-[#2343FF]"> proceso</span>
-        </motion.h2>
+        <div className="mx-auto w-fit">
+          <p className="mb-6">/ Proceso</p>
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center text-3xl font-semibold md:text-6xl"
+          >
+            Nuestro<span className="text-blue-500"> proceso</span>
+          </motion.h2>
+        </div>
 
         {/* timeline */}
         <motion.ul
@@ -88,7 +91,7 @@ export default function ProcessTimeline() {
               <div
                 className={`basis-1/2 px-4 md:px-8 ${idx % 2 === 0 ? 'text-left' : 'text-right'}`}
               >
-                <div className="rounded-md bg-white/5 p-4 backdrop-blur-sm">
+                <div className="rounded-md p-4">
                   <h3 className="text-lg font-medium md:text-xl">
                     {step.title}
                   </h3>

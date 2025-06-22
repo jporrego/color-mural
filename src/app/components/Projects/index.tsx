@@ -27,11 +27,11 @@ export default function Projects({ onImageClick }: Props) {
 
       <div className="mx-auto w-full max-w-[1920px] px-6 md:px-10">
         {/* ② headline: white + accent-blue word + arrow */}
-        <p className="mb-6">/Proyectos</p>
+        <p className="mb-6">/ Proyectos</p>
         <h2 className="mb-6 flex items-center gap-2 text-center text-3xl font-semibold md:text-6xl">
           <span>Trabajos</span>
-          <span className="text-[#2343FF]">destacados</span>
-          <CornerRightDown className="size-8 translate-y-[8px] font-bold text-[#2343FF]" />
+          <span className="text-primary">destacados</span>
+          <CornerRightDown className="text-primarux font-boy size-8 translate-y-[8px]" />
         </h2>
         <p className="mb-12 max-w-[800px]">
           Explora el portafolio de nuestro estudio para descubrir cómo Color
