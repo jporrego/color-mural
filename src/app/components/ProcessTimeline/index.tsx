@@ -42,7 +42,7 @@ export default function ProcessTimeline() {
       {/* decorative rings (optional) */}
       <div className="pointer-events-none absolute top-0 left-1/2 h-[1800px] w-[1800px] -translate-x-1/2 rounded-full border border-white/5" />
       <div className="pointer-events-none absolute top-[300px] left-1/2 h-[1800px] w-[1800px] -translate-x-1/2 rounded-full border border-white/5" />
-      <div className="mx-auto max-w-[1000px] px-6">
+      <div className="px-2md:px-6 mx-auto max-w-[1000px]">
         {/* heading */}
         <div className="mx-auto w-fit">
           <p className="mb-6">/ Proceso</p>
