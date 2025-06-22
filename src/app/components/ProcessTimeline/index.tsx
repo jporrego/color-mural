@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -26,17 +28,34 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section id="proceso" className="bg-block1-soft py-6 md:py-12">
-      <div className="mx-auto max-w-[1000px] px-4 sm:px-6 md:px-6">
+    <section
+      id="proceso"
+      /* solid black + faint circles for depth */
+      className="relative overflow-hidden py-24 text-white"
+    >
+      <div className="pointer-events-none absolute inset-x-0 -top-40 -z-10 h-full overflow-hidden">
+        <Image
+          src="/images/portfolio/1.webp"
+          alt=""
+          fill
+          priority
+          className="blur-xlx scale-110 object-cover brightness-20"
+        />
+      </div>
+
+      {/* decorative rings (optional) */}
+      <div className="pointer-events-none absolute top-0 left-1/2 h-[1800px] w-[1800px] -translate-x-1/2 rounded-full border border-white/5" />
+      <div className="pointer-events-none absolute top-[300px] left-1/2 h-[1800px] w-[1800px] -translate-x-1/2 rounded-full border border-white/5" />
+      <div className="mx-auto max-w-[1000px] px-6">
         {/* heading */}
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-10 text-center text-xl sm:text-2xl md:text-3xl"
+          className="mb-16 text-center text-3xl font-semibold md:text-4xl"
         >
-          Nuestro proceso
+          Nuestro<span className="text-[#2343FF]"> proceso</span>
         </motion.h2>
 
         {/* timeline */}
@@ -45,7 +64,7 @@ export default function ProcessTimeline() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="relative before:absolute before:top-0 before:left-1/2 before:h-full before:w-px before:-translate-x-1/2 before:bg-gradient-to-b before:from-transparent before:via-[#3c2e23]/30 before:to-transparent"
+          className="relative before:absolute before:top-0 before:left-1/2 before:h-full before:w-px before:-translate-x-1/2 before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent"
         >
           {steps.map((step, idx) => (
             <motion.li
@@ -58,38 +77,34 @@ export default function ProcessTimeline() {
                   transition: { duration: 0.6, ease: 'easeOut' },
                 },
               }}
-              className={`group relative mb-10 flex w-full items-center ${
-                idx % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
-              }`}
+              className={`group relative mb-20 flex w-full items-center ${idx % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}
             >
-              {/* connector dot with step number inside */}
-              <span className="bg-highlight absolute top-1/2 left-1/2 z-10 flex h-4 w-4 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-xs font-bold text-white md:h-5 md:w-5">
+              {/* connector dot */}
+              <span className="absolute top-1/2 left-1/2 z-10 flex h-5 w-5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#2343FF] text-xs font-bold">
                 {idx + 1}
               </span>
 
               {/* text area */}
               <div
-                className={`basis-1/2 px-2 ${
-                  idx % 2 === 0
-                    ? 'pl-4 text-left md:pl-8'
-                    : 'pr-4 text-right md:pr-8'
-                }`}
+                className={`basis-1/2 px-4 md:px-8 ${idx % 2 === 0 ? 'text-left' : 'text-right'}`}
               >
-                <div className="rounded-sm p-1 md:p-3">
-                  <h3 className="text-sm font-medium sm:text-base md:text-xl">
+                <div className="rounded-md bg-white/5 p-4 backdrop-blur-sm">
+                  <h3 className="text-lg font-medium md:text-xl">
                     {step.title}
                   </h3>
-                  <p className="text-xs sm:text-sm md:text-base">{step.desc}</p>
+                  <p className="mt-1 text-sm text-white/80 md:text-base">
+                    {step.desc}
+                  </p>
                 </div>
               </div>
 
               {/* image */}
               <motion.div
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.03 }}
                 transition={{ stiffness: 150, damping: 15 }}
                 className="basis-1/2 px-4"
               >
-                <div className="relative h-[110px] w-full overflow-hidden rounded-lg shadow-lg sm:h-[150px] md:h-[200px]">
+                <div className="relative h-[140px] w-full overflow-hidden rounded-lg shadow-2xl md:h-[220px]">
                   <Image
                     src={step.img}
                     alt={`Paso ${idx + 1} - ${step.title}`}

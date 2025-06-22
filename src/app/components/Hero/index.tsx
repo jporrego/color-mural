@@ -33,7 +33,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-9 bg-black/45 backdrop-brightness-[.65]" />
 
       {/* ── Text block ─────────────────────────────────────────────── */}
-      <div className="mx-auto w-full max-w-7xl px-6 pb-32 md:px-10">
+      <div className="mx-auto w-full max-w-7xl px-6 pb-20 md:px-8">
         {/* Headline row */}
         <motion.div
           variants={container}
@@ -44,7 +44,7 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="font-dm-serif text-[clamp(48px,10vw,130px)] leading-[0.85] font-semibold text-white"
+            className="text-[clamp(48px,10vw,100px)] leading-[0.85] font-semibold text-white"
           >
             COLOR MURAL
           </motion.h1>
@@ -54,7 +54,7 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="max-w-2xl text-lg leading-snug font-medium text-white md:pl-8 md:text-2xl"
+            className="max-w-2xl text-lg font-medium text-white md:pl-10 md:text-2xl"
           >
             Especialistas en murales que transforman espacios cotidianos en
             hitos urbanos, dirigido por el artista Benjamín Contador
@@ -70,17 +70,17 @@ export default function Hero() {
         >
           <a
             href="#contacto"
-            className="inline-block rounded-full bg-[#2343FF] px-8 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#1232f5] md:text-base"
+            className="inline-block rounded-full bg-[#2343FF] px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#1232f5] md:text-base"
           >
-            Inicia tu proyecto
+            Solicita una propuesta
           </a>
 
           {/* secondary CTA sits flush right on ≥md screens */}
           <a
             href="#agenda"
-            className="inline-block rounded-full border border-white/50 px-8 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-white/10 md:ml-auto md:text-base"
+            className="inline-block rounded-full border border-white/50 px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-white/10 md:ml-auto md:text-base"
           >
-            Solicita una propuesta
+            Conversa con nosotros
           </a>
         </motion.div>
       </div>
