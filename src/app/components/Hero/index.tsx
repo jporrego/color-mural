@@ -71,7 +71,7 @@ export default function Hero() {
             </motion.p>
             <motion.a className="relative" href="#projects">
               <Image
-                src="/images/benja.jpg"
+                src="/images/benja.webp"
                 alt="Equipo Color Mural trabajando"
                 width={100}
                 height={100}
@@ -123,7 +123,7 @@ export default function Hero() {
             transition={{ duration: 0.25, delay: 0.5 }}
           >
             <Image
-              src="/images/portfolio/5-crop.jpg"
+              src="/images/portfolio/5-crop.webp"
               alt="Mural de Color Mural"
               width={1000}
               height={500}
@@ -150,28 +150,28 @@ export default function Hero() {
           variants={container}
         >
           <Image
-            src="/images/logos/santander.png"
+            src="/images/logos/santander.webp"
             alt="Mural de Color Mural"
             width={125}
             height={50}
             className="h-auto w-[75px] md:w-[125px]"
           />{' '}
           <Image
-            src="/images/logos/starbucks.png"
+            src="/images/logos/starbucks.webp"
             alt="Mural de Color Mural"
             width={65}
             height={50}
             className="h-auto w-[40px] md:w-[65px]"
           />
           <Image
-            src="/images/logos/banco_chile.png"
+            src="/images/logos/banco_chile.webp"
             alt="Mural de Color Mural"
             width={125}
             height={50}
             className="h-auto w-[75px] md:w-[125px]"
           />
           <Image
-            src="/images/logos/socovesa.png"
+            src="/images/logos/socovesa.webp"
             alt="Mural de Color Mural"
             width={125}
             height={50}

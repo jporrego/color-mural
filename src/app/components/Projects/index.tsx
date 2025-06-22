@@ -6,9 +6,16 @@ interface Props {
   onImageClick: (src: string) => void;
 }
 
-const imageList1 = ['1.jpg', '2.jpg', '3.jpeg', '4.jpeg', '5.jpg', '6.jpg'];
+const imageList1 = ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp'];
 
-const imageList2 = ['7.jpeg', '8.jpeg', '9.jpg', '10.jpg', '11.jpg', '12.jpg'];
+const imageList2 = [
+  '7.webp',
+  '8.webp',
+  '9.webp',
+  '10.webp',
+  '11.webp',
+  '12.webp',
+];
 
 export default function Projects({ onImageClick }: Props) {
   return (

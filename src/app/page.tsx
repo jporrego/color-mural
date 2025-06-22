@@ -12,7 +12,7 @@ import Lightbox from './components/Lightbox';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-  const [activeImg, setActiveImg] = useState('/images/img1.png');
+  const [activeImg, setActiveImg] = useState('/images/img1.webp');
 
   const handleOpen = (src: string) => {
     setActiveImg(src);
