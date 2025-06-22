@@ -66,26 +66,6 @@ export default function Projects({ onImageClick }: Props) {
             );
           })}
         </div>
-        <div className="mt-16 mb-8 flex items-center justify-center gap-16">
-          <Image
-            src="/images/logos/santander.png"
-            alt="Mural de Color Mural"
-            width={150}
-            height={50}
-          />
-          <Image
-            src="/images/logos/banco_chile.png"
-            alt="Mural de Color Mural"
-            width={150}
-            height={50}
-          />
-          <Image
-            src="/images/logos/socovesa.png"
-            alt="Mural de Color Mural"
-            width={150}
-            height={50}
-          />
-        </div>
       </div>
     </section>
   );

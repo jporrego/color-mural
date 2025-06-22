@@ -29,7 +29,7 @@ export default function Hero() {
       />
 
       {/* Optional overlay for readability */}
-      <div className="absolute inset-0 -z-9 bg-black/40 backdrop-brightness-75" />
+      <div className="absolute inset-0 -z-9 bg-black/40 backdrop-brightness-65" />
 
       {/* Content wrapper */}
       <div className="relative mx-auto flex w-full max-w-[1000px] flex-col gap-10 pt-8">
@@ -134,27 +134,30 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto flex flex-col items-center justify-center gap-4 bg-white/100 p-6 md:gap-6">
-        <div className="md:text-large text-center text-xs font-semibold">
+        <div className="text-center text-xs font-semibold md:text-lg">
           Estos clientes ya confiaron en nuestro trabajo
         </div>
         <div className="flex w-full items-center justify-center gap-6 md:gap-16">
           <Image
             src="/images/logos/santander.png"
             alt="Mural de Color Mural"
-            width={75}
+            width={125}
             height={50}
+            className="h-auto w-[75px] md:w-[125px]"
           />
           <Image
             src="/images/logos/banco_chile.png"
             alt="Mural de Color Mural"
-            width={75}
+            width={125}
             height={50}
+            className="h-auto w-[75px] md:w-[125px]"
           />
           <Image
             src="/images/logos/socovesa.png"
             alt="Mural de Color Mural"
-            width={75}
+            width={125}
             height={50}
+            className="h-auto w-[75px] md:w-[125px]"
           />
         </div>
       </div>
