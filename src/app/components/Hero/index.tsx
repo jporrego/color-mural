@@ -134,10 +134,21 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto flex flex-col items-center justify-center gap-4 bg-white/100 p-6 md:gap-6">
-        <div className="text-center text-xs font-semibold md:text-lg">
+        <motion.div
+          className="text-center text-xs font-semibold md:text-lg"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           Estos clientes ya confiaron en nuestro trabajo
-        </div>
-        <div className="flex w-full items-center justify-center gap-6 md:gap-16">
+        </motion.div>
+        <motion.div
+          className="flex w-full items-center justify-center gap-6 md:gap-16"
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          variants={container}
+        >
           <Image
             src="/images/logos/santander.png"
             alt="Mural de Color Mural"
@@ -159,7 +170,7 @@ export default function Hero() {
             height={50}
             className="h-auto w-[75px] md:w-[125px]"
           />
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
