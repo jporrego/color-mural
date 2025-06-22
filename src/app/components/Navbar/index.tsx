@@ -15,7 +15,7 @@ export default function Navbar() {
     const onScroll = () => {
       const y = window.scrollY;
 
-      setSolid(y > 350);
+      setSolid(y > 150);
 
       if (y < 350 || y < lastScroll.current) setShow(true);
       else setShow(false);

@@ -68,7 +68,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="absolute inset-x-0 bottom-16 z-20 mx-auto flex w-full max-w-[1920px] flex-col gap-4 px-6 md:static md:bottom-auto md:mt-12 md:flex-row"
+          className="absolute inset-x-0 bottom-20 z-20 mx-auto flex w-full max-w-[1920px] flex-col gap-4 px-6 md:static md:bottom-auto md:mt-12 md:flex-row"
         >
           <a
             href="#contacto"
