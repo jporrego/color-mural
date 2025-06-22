@@ -32,8 +32,6 @@ export default function Hero() {
       {/* Dark veil so white text always pops */}
       <div className="absolute inset-0 -z-9 bg-black/45 backdrop-brightness-[.65]" />
 
-      <Navbar />
-
       {/* ── Text block ─────────────────────────────────────────────── */}
       <div className="mx-auto w-full max-w-7xl px-6 pb-32 md:px-10">
         {/* Headline row */}
