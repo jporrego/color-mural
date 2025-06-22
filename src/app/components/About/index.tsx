@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <section id="sobre" className="bg-block1-soft py-12">
+    <section id="sobre" className="bg-background py-12">
       <div className="mx-auto grid w-full max-w-[1000px] grid-cols-1 items-center gap-8 px-6 md:grid-cols-2 md:px-10">
         <div>
           <h2 className="mb-6 text-center text-2xl md:text-left md:text-3xl">

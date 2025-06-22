@@ -12,11 +12,12 @@ const imageList2 = ['7.jpeg', '8.jpeg', '9.jpg', '10.jpg', '11.jpg', '12.jpg'];
 
 export default function Projects({ onImageClick }: Props) {
   return (
-    <section id="projects" className="bg-block1-soft py-12">
+    <section id="projects" className="bg-background py-12">
       <div className="mx-auto w-full max-w-[1000px] px-6 md:px-10">
         <h2 className="mb-8 text-center text-2xl md:text-3xl">
           Proyectos destacados
         </h2>
+
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-4">
           {imageList1.map((file) => {
             const src = `/images/portfolio/${file}`;

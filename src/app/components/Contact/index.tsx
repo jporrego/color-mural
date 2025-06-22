@@ -8,7 +8,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-20">
+    <section id="contacto" className="bg-block1-soft py-20">
       <motion.div
         initial="hidden"
         whileInView="visible"
