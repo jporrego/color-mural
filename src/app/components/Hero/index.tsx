@@ -155,6 +155,13 @@ export default function Hero() {
             width={125}
             height={50}
             className="h-auto w-[75px] md:w-[125px]"
+          />{' '}
+          <Image
+            src="/images/logos/starbucks.png"
+            alt="Mural de Color Mural"
+            width={65}
+            height={50}
+            className="h-auto w-[40px] md:w-[65px]"
           />
           <Image
             src="/images/logos/banco_chile.png"
