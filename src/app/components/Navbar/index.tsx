@@ -95,7 +95,7 @@ export default function Navbar() {
 
             {/* Burger */}
             <button
-              className="p-2 md:hidden"
+              className="self-end p-2"
               aria-label="Abrir menú"
               onClick={() => setOpen(true)}
             >
@@ -120,14 +120,14 @@ export default function Navbar() {
             />
 
             {/* sheet */}
-            <div className="relative z-10 w-full max-w-xs rounded-2xl bg-white p-8 shadow-xl">
+            <div className="relative z-10 w-full max-w-xs rounded-2xl bg-black p-8 text-white shadow-xl">
               <nav className="flex flex-col items-center gap-6 text-base tracking-wide uppercase">
                 {links.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="hover:underline"
+                    className="text-large font-bold hover:underline"
                   >
                     {link.label}
                   </a>
@@ -145,7 +145,7 @@ export default function Navbar() {
               <button
                 aria-label="Cerrar menú"
                 onClick={() => setOpen(false)}
-                className="absolute top-4 right-4 rounded-full p-2 hover:bg-gray-200"
+                className="hover:bg-primary absolute top-4 right-4 rounded-full p-2"
               >
                 <X className="size-6" />
               </button>

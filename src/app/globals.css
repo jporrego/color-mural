@@ -12,13 +12,7 @@
   --font-raleway: var(--font-raleway);
   --font-roboto: var(--font-roboto);
   --font-dm-sans: var(--font-dm-sans);
-  --color-dark: #3c2e23;
-  --color-block1: #ffe5cb;
-  --color-block1-soft: #faefe2;
-  --color-block2: #b1d1bf;
-  --color-block3: #e4ccf2;
-  --color-block4: #b1bbd8;
-  --color-highlight: #ef8565;
+  --color-primary: #243aff;
 }
 
 
