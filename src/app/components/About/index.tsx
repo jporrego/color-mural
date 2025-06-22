@@ -18,8 +18,9 @@ export default function About() {
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-16 px-6 md:grid-cols-2 md:px-10">
         {/* ── copy block ─────────────────────────────────────────── */}
         <div>
-          <h2 className="mb-8 text-center text-4xl font-semibold md:text-left md:text-5xl">
-            <span className="text-[#2343FF]">Nuestra</span> esencia
+          <p className="mb-6">/ Sobre nosotros</p>
+          <h2 className="mb-8 text-3xl font-semibold md:text-left md:text-6xl">
+            Nuestra <span className="text-[#2343FF]">esencia</span>
           </h2>
 
           <p className="mx-auto max-w-prose text-lg leading-relaxed text-white/85 md:mx-0">
@@ -32,11 +33,11 @@ export default function About() {
           </p>
 
           {/* quick stats */}
-          <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:gap-8 md:mt-14">
+          {/* <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:gap-8 md:mt-14">
             <Stat value="+150" label="Proyectos realizados" />
             <Stat value="12" label="Años de experiencia" />
             <Stat value="8" label="Premios &amp; menciones" />
-          </div>
+          </div> */}
         </div>
 
         {/* ── hero image ─────────────────────────────────────────── */}

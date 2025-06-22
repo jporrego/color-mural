@@ -53,7 +53,7 @@ export default function ProcessTimeline() {
             viewport={{ once: true }}
             className="mb-16 text-center text-3xl font-semibold md:text-6xl"
           >
-            Nuestro<span className="text-blue-500"> proceso</span>
+            Nuestro<span className="text-primary"> proceso</span>
           </motion.h2>
         </div>
 
