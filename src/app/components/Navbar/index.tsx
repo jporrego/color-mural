@@ -35,9 +35,8 @@ export default function Navbar() {
 
   const links = [
     { href: '#inicio', label: 'Inicio' },
-
-    { href: '#proceso', label: 'Proceso' },
     { href: '#projects', label: 'Proyectos' },
+    { href: '#proceso', label: 'Proceso' },
     { href: '#sobre', label: 'Sobre\u00a0nosotros' },
     { href: '#contacto', label: 'Contacto' },
   ];
