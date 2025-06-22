@@ -7,7 +7,7 @@ import { createPortal } from 'react-dom';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [show, setShow] = useState(true);
-  const [solid, setSolid] = useState(true);
+  const [solid, setSolid] = useState(false);
   const lastScroll = useRef(0);
   console.log(solid);
 
@@ -39,7 +39,7 @@ export default function Navbar() {
     <>
       {/* Main bar — placed absolute so the hero video sits behind it */}
       <header
-        className={`pointer-events-auto fixed inset-x-0 top-0 z-1000 transition-all duration-300 ${show ? 'translate-y-0' : '-translate-y-full'} ${solid ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'} `}
+        className={`pointer-events-auto fixed inset-x-0 top-0 z-40 transition-all duration-300 ${show ? 'translate-y-0' : '-translate-y-full'} ${solid ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'} `}
       >
         <div className="mx-auto flex w-full max-w-7xl items-start justify-between px-6 py-4 text-white">
           {/* Left: contact lines (desktop only) */}
