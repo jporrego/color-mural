@@ -32,7 +32,7 @@ export default function ProcessTimeline() {
       <div className="overflow-repeat pointer-events-none absolute inset-x-0 -top-20 -z-10 h-full">
         <Image
           src="/images/portfolio/1.webp"
-          alt=""
+          alt="Proceso de muralismo"
           fill
           priority
           className="blur-xlx scale-110 object-cover brightness-20"
@@ -106,7 +106,7 @@ export default function ProcessTimeline() {
                 <div className="relative h-[140px] w-full overflow-hidden rounded-lg shadow-2xl md:h-[220px]">
                   <Image
                     src={step.img}
-                    alt={`Paso ${idx + 1} - ${step.title}`}
+                    alt={`Paso ${idx + 1} - ${step.title} del proceso de muralismo`}
                     fill
                     quality={70}
                     className="object-cover"
