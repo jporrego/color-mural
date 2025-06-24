@@ -35,12 +35,18 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL('https://www.colormural.cl'),
   openGraph: {
-    title: 'Color Mural – Estudio de Murales',
+    title: 'Color Mural - Estudio de Murales',
     description:
       'Descubre cómo Color Mural convierte muros comunes en verdaderos hitos urbanos. Solicita un mural personalizado para tu proyecto.',
     url: 'https://www.colormural.cl',
     locale: 'es_CL',
     type: 'website',
+    images: ['/opengraph-image.jpg'],
+  },
+
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
 };
 

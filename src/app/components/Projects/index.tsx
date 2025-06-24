@@ -18,7 +18,7 @@ const imageList2 = [
 export default function Projects({ onImageClick }: Props) {
   return (
     <section
-      id="projects"
+      id="proyectos"
       /* ① full-width dark block with a subtle blue halo in the corner */
       className="relative overflow-hidden bg-black py-20 text-white"
     >
