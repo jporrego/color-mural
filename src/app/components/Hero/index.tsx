@@ -24,13 +24,14 @@ export default function Hero() {
         src="/videos/colormural_light3.mp4"
         autoPlay
         playsInline
+        poster="/images/portfolio/5.webp"
         loop
         muted
-        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover"
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover brightness-40"
       />
 
       {/* Dark veil so white text always pops */}
-      <div className="absolute inset-0 -z-9 bg-black/45 backdrop-brightness-[.65]" />
+      {/* <div className="absolute inset-0 -z-9 bg-black/45 backdrop-brightness-[.65]" /> */}
 
       {/* ── Text block ─────────────────────────────────────────────── */}
       <div className="mx-auto w-full max-w-[1920px] px-6 pb-20">
