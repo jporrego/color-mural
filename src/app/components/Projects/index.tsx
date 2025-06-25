@@ -63,7 +63,7 @@ export default function Projects({ onImageClick }: Props) {
 
         {/* ④ inline video break */}
         <video
-          src="/videos/color mural.mp4"
+          src="/videos/colormural_light3.mp4"
           loop
           muted
           autoPlay
