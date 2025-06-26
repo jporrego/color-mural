@@ -1,6 +1,7 @@
 import { Mail, PhoneCall, Copy, LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { trackContact } from '../../utils';
 
 export default function Contact() {
   const variants = {
@@ -21,10 +22,15 @@ export default function Contact() {
     icon: LucideIcon;
     text: string;
     href: string;
+    method: 'phone' | 'email';
   }
 
-  const ContactCard = ({ icon: Icon, text, href }: CardProps) => (
-    <a href={href} className="group block focus:outline-none">
+  const ContactCard = ({ icon: Icon, text, href, method }: CardProps) => (
+    <a
+      href={href}
+      className="group block focus:outline-none"
+      onMouseDown={() => trackContact(method)}
+    >
       <div className="flex h-full w-full items-center justify-between gap-4 rounded-2xl bg-white/8 p-8">
         <div className="flex items-center gap-4">
           <Icon className="h-8 w-8 text-white/60 transition-transform" />
@@ -85,11 +91,13 @@ export default function Contact() {
             icon={Mail}
             text="hola@colormural.cl"
             href="mailto:hola@colormural.cl?subject=Proyecto%20de%20mural"
+            method="email"
           />
           <ContactCard
             icon={PhoneCall}
             text="+56 9 9576 7606"
             href="tel:+56995767606"
+            method="phone"
           />
         </div>
       </motion.div>

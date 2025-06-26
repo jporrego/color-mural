@@ -10,7 +10,6 @@ export default function Navbar() {
   const [show, setShow] = useState(true);
   const [solid, setSolid] = useState(false);
   const lastScroll = useRef(0);
-  console.log(solid);
 
   useEffect(() => {
     const onScroll = () => {
