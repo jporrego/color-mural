@@ -1,8 +1,5 @@
-'use client';
-
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Navbar from '../Navbar';
 
 const container = {
   hidden: {},
@@ -41,16 +38,22 @@ export default function Hero() {
           className="flex flex-col items-start gap-6 md:flex-row md:items-end"
         >
           {/* Brand name */}
-          <motion.h1
+          <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-[clamp(48px,10vw,100px)] leading-[0.85] font-semibold text-white"
+            className="relative w-[60vw] max-w-[300px] min-w-[300px]"
           >
-            COLOR
-            <br />
-            MURAL
-          </motion.h1>
+            <Image
+              src="/images/logo_text.webp"
+              alt="Color Mural logo"
+              width={536}
+              height={412}
+              priority
+              className="h-auto w-full"
+              sizes="(max-width: 768px) 40vw, 20vw"
+            />
+          </motion.div>
 
           {/* Tag-line (wraps under larger screens) */}
           <motion.p
