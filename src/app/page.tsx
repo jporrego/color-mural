@@ -9,6 +9,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Lightbox from './components/Lightbox';
+import WhatsAppButton from './components/WhatsAppButton';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -28,6 +29,7 @@ export default function Home() {
       <About />
       <Contact />
       <Footer />
+      <WhatsAppButton />
       <Lightbox open={open} imgSrc={activeImg} onClose={() => setOpen(false)} />
     </div>
   );
