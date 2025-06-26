@@ -81,13 +81,12 @@ export default function Hero() {
             Solicita una propuesta
           </a>
 
-          {/* secondary CTA sits flush right on ≥md screens */}
-          <a
+          {/* <a
             href="#agenda"
             className="inline-block w-fit rounded-full border border-white/50 px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-white/10 md:ml-auto md:text-base"
           >
             Conversa con nosotros
-          </a>
+          </a> */}
         </motion.div>
       </div>
     </motion.section>

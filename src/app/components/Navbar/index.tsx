@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Menu, X, Paintbrush } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 
@@ -68,12 +68,12 @@ export default function Navbar() {
               <p className="mr-4 flex flex-col gap-1 text-xs">
                 Instagram:
                 <a
-                  href="https://www.instagram.com/colormural/"
+                  href="https://www.instagram.com/colormuralchile/"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-highlight underline"
                 >
-                  @colormural
+                  @colormuralchile
                 </a>
               </p>
             </div>

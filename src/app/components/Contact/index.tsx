@@ -1,5 +1,6 @@
-import { Mail, PhoneCall } from 'lucide-react';
+import { Mail, PhoneCall, Copy, LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Contact() {
   const variants = {
@@ -7,17 +8,55 @@ export default function Contact() {
     visible: { opacity: 1, y: 0 },
   };
 
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const copyToClipboard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(text);
+      setTimeout(() => setCopied(null), 2500);
+    } catch (err) {}
+  };
+
+  interface CardProps {
+    icon: LucideIcon;
+    text: string;
+  }
+
+  const ContactCard = ({ icon: Icon, text }: CardProps) => (
+    <div className="group">
+      <div className="flex h-full w-full items-center justify-between gap-4 rounded-2xl bg-white/5 p-8 backdrop-blur-md transition hover:shadow-2xl hover:shadow-[#2343FF]/30">
+        {/* Left icon + text */}
+        <div className="flex items-center gap-4">
+          <Icon className="h-8 w-8 text-white/60 transition-transform" />
+          {copied === text ? (
+            <span className="text-xs font-semibold tracking-wide uppercase">
+              ¡Copiado!
+            </span>
+          ) : (
+            <span className="text-sm font-medium tracking-wide select-text md:text-base">
+              {text}
+            </span>
+          )}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => copyToClipboard(text)}
+          aria-label={`Copiar ${text}`}
+          className="cursor-pointer rounded-md p-2 transition hover:bg-white/10 focus:ring-2 focus:ring-white/40 focus:outline-none"
+        >
+          <Copy className="h-5 w-5 text-white/60 group-hover:text-white" />
+        </button>
+      </div>
+    </div>
+  );
+
   return (
     <section
       id="contacto"
-      /* black canvas + faint glow to echo the rest of the site */
       className="bg-primary relative overflow-hidden py-24 text-white"
     >
-      {/* blue halo decor */}
-      <div className="pointer-events-none absolute -top-72 -right-72 h-[400px] w-[400px] rounded-full bg-[#2343FF]/20 blur-[140px]" />
-
-      <div className="pointer-events-none absolute -top-20 right-0 left-0 h-20 bg-gradient-to-b from-transparent to-black" />
-
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -43,33 +82,8 @@ export default function Contact() {
 
         {/* Contact methods */}
         <div className="mt-16 grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
-          {/* Email */}
-          <motion.a
-            variants={variants}
-            href="mailto:hola@colormural.cl"
-            className="group"
-          >
-            <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-white/5 p-8 backdrop-blur-md transition hover:shadow-2xl hover:shadow-[#2343FF]/30">
-              <Mail className="h-8 w-8 text-white/60 transition-transform group-hover:-translate-y-1" />
-              <span className="text-sm font-medium tracking-wide md:text-base">
-                hola@colormural.cl
-              </span>
-            </div>
-          </motion.a>
-
-          {/* Phone */}
-          <motion.a
-            variants={variants}
-            href="tel:+56912345678"
-            className="group"
-          >
-            <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-white/5 p-8 backdrop-blur-md transition hover:shadow-2xl hover:shadow-[#2343FF]/30">
-              <PhoneCall className="h-8 w-8 text-white/60 transition-transform group-hover:-translate-y-1" />
-              <span className="text-sm font-medium tracking-wide md:text-base">
-                +56&nbsp;9&nbsp;1234&nbsp;5678
-              </span>
-            </div>
-          </motion.a>
+          <ContactCard icon={Mail} text="hola@colormural.cl" />
+          <ContactCard icon={PhoneCall} text="+56 9 9576 7606" />
         </div>
       </motion.div>
     </section>
