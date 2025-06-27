@@ -1,3 +1,5 @@
+import { trackContact } from '../../utils';
+
 export default function Footer() {
   return (
     <footer className="bg-black py-6 text-xs text-[#f7f5f2] md:text-sm">
@@ -9,18 +11,20 @@ export default function Footer() {
 
         <div className="flex gap-3">
           <a
-            href="https://instagram.com/colormural"
+            href="https://www.instagram.com/colormuralchile/"
             target="_blank"
             rel="noreferrer"
             className="hover:underline"
+            onMouseDown={() => trackContact('instagram')}
           >
             Instagram
           </a>
           <a
-            href="https://wa.me/56912345678"
+            href="https://wa.me/56995767606"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="hover:underline"
+            onMouseDown={() => trackContact('whatsapp')}
           >
             WhatsApp
           </a>

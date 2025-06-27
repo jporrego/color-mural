@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
+import { trackContact } from '../../utils';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -60,8 +61,9 @@ export default function Navbar() {
                 <a
                   href="mailto:info@colormural.cl"
                   className="hover:text-highlight underline"
+                  onMouseDown={() => trackContact('email')}
                 >
-                  info@colormural.cl
+                  hola@colormural.cl
                 </a>
               </p>
               <p className="mr-4 flex flex-col gap-1 text-xs">
@@ -71,6 +73,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-highlight underline"
+                  onMouseDown={() => trackContact('instagram')}
                 >
                   @colormuralchile
                 </a>
