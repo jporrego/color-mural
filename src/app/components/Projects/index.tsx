@@ -42,15 +42,14 @@ export default function Projects({ onImageClick }: Props) {
         {/* ③ first image grid */}
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-4">
           {imageList1.map((file) => {
-            const src = `/images/portfolio/${file}`;
             return (
               <button
-                key={src}
+                key={file}
                 className="group relative aspect-[4/3] overflow-hidden rounded-sm"
-                onClick={() => onImageClick(src)}
+                onClick={() => onImageClick(`/images/portfolio/${file}`)}
               >
                 <Image
-                  src={src}
+                  src={`/images/portfolio/thumbs/${file}`}
                   alt={`Mural ${file}`}
                   fill
                   sizes="(max-width:768px) 50vw, 33vw"
@@ -74,15 +73,14 @@ export default function Projects({ onImageClick }: Props) {
         {/* ⑤ second image grid */}
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-4">
           {imageList2.map((file) => {
-            const src = `/images/portfolio/${file}`;
             return (
               <button
-                key={src}
+                key={file}
                 className="group relative aspect-[4/3] overflow-hidden rounded-sm"
-                onClick={() => onImageClick(src)}
+                onClick={() => onImageClick(`/images/portfolio/${file}`)}
               >
                 <Image
-                  src={src}
+                  src={`/images/portfolio/thumbs/${file}`}
                   alt={`Mural ${file}`}
                   fill
                   sizes="(max-width:768px) 50vw, 33vw"
