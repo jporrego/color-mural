@@ -4,7 +4,7 @@ export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Color Mural - Murales Personalizados',
+    name: 'Color Mural - Servicio de Muralismo en Chile',
     short_name: 'Color Mural',
     description:
       'Color Mural es el estudio de Benjamín Contador, especializado en murales que transforman espacios urbanos y comerciales en Chile.',
@@ -15,7 +15,19 @@ export default function manifest(): MetadataRoute.Manifest {
     orientation: 'portrait',
     theme_color: '#2343FF',
     background_color: '#000',
-    icons: [{ src: '/favicon.ico', sizes: '72x72', type: 'image/x-icon' }],
+    icons: [
+      { src: '/favicon.ico', sizes: '72x72', type: 'image/x-icon' },
+      {
+        src: '/apple-icon.png',
+        sizes: '72x72',
+        type: 'image/png',
+      },
+      {
+        src: 'icon.png',
+        sizes: '72x72',
+        type: 'image/png',
+      },
+    ],
     categories: ['art', 'design', 'business'],
     shortcuts: [
       {

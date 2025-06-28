@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     images: ['/opengraph-image.jpg'],
   },
 
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-icon.png',
-  },
+  // icons: {
+  //   icon: '/favicon.ico',
+  //   apple: '/apple-icon.png',
+  // },
 };
 
 export default function RootLayout({
