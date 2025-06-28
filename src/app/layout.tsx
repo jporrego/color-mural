@@ -23,7 +23,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Color Mural – Murales personalizados en Chile',
+  title: 'Color Mural – Servicio de muralismo en Chile',
   description:
     'Color Mural es el estudio del artista Benjamín Contador, especializado en murales que transforman espacios urbanos y comerciales.',
   keywords: [
