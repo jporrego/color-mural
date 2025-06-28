@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://www.colormural.cl
+Sitemap: https://www.colormural.cl/sitemap.xml
