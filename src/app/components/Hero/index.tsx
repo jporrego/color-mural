@@ -53,7 +53,7 @@ export default function Hero() {
             className="relative w-[60vw] max-w-[300px] min-w-[300px]"
           >
             <Image
-              src="/images/logo_text.webp"
+              src="/images/colormural.svg"
               alt="Color Mural logo"
               width={536}
               height={412}

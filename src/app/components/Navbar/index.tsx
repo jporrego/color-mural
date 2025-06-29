@@ -46,7 +46,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <div className="relative w-[20px]">
               <Image
-                src="/images/logo_icon.webp"
+                src="/images/colormural_icon.svg"
                 alt="Color Mural logo"
                 width={536}
                 height={412}
