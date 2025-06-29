@@ -25,15 +25,26 @@ export default function Hero() {
       className="relative isolate flex h-screen w-full flex-col justify-start overflow-hidden pt-40 md:justify-end md:pt-0"
     >
       {/* ── Background ─────────────────────────────────────────────── */}
-      <video
-        src="/videos/colormural_light4.mp4"
-        autoPlay
-        playsInline
-        poster="/images/portfolio/5.webp"
-        loop
-        muted
-        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover brightness-40"
-      />
+      <div className="absolute inset-0 -z-10 h-full w-full">
+        {isDesktop ? (
+          <video
+            src="/videos/colormural_light4.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-full w-full object-cover brightness-40"
+          />
+        ) : (
+          <Image
+            src="/images/portfolio/5.webp"
+            alt="Color Mural background"
+            fill
+            priority
+            className="object-cover brightness-40"
+          />
+        )}
+      </div>
 
       {/* Dark veil so white text always pops */}
       {/* <div className="absolute inset-0 -z-9 bg-black/45 backdrop-brightness-[.65]" /> */}

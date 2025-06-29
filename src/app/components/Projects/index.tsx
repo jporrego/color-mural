@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { CornerRightDown } from 'lucide-react';
+import useIsDesktop from '@/hooks/useIsDesktop';
 
 interface Props {
   onImageClick: (src: string) => void;
@@ -16,6 +17,7 @@ const imageList2 = [
 ];
 
 export default function Projects({ onImageClick }: Props) {
+  const isDesktop = useIsDesktop();
   return (
     <section
       id="proyectos"
@@ -61,14 +63,18 @@ export default function Projects({ onImageClick }: Props) {
         </div>
 
         {/* ④ inline video break */}
-        <video
-          src="/videos/colormural_light4.mp4"
-          loop
-          muted
-          autoPlay
-          playsInline
-          className="my-4 w-full rounded-sm object-cover"
-        />
+        <div className={`${isDesktop ? 'my-4' : 'my-2'} w-full`}>
+          {isDesktop && (
+            <video
+              src="/videos/colormural_light4.mp4"
+              loop
+              muted
+              autoPlay
+              playsInline
+              className="w-full rounded-sm object-cover"
+            />
+          )}
+        </div>
 
         {/* ⑤ second image grid */}
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-4">
