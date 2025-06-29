@@ -1,5 +1,8 @@
-import { motion } from 'framer-motion';
+'use client';
+
+import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
+import useIsDesktop from '@/hooks/useIsDesktop';
 
 const container = {
   hidden: {},
@@ -7,13 +10,18 @@ const container = {
 };
 
 export default function Hero() {
+  const isDesktop = useIsDesktop();
+  const prefersReduced = useReducedMotion();
+  const reduceMotion = prefersReduced || !isDesktop;
+  const animationKey = reduceMotion ? 'no-motion' : 'with-motion';
+
   return (
     <motion.section
+      key={animationKey}
       id="inicio"
-      initial="hidden"
-      animate="show"
-      variants={container}
-      /* Full-screen hero, positions everything at the bottom */
+      initial={reduceMotion ? false : 'hidden'}
+      animate={reduceMotion ? undefined : 'show'}
+      variants={reduceMotion ? undefined : container}
       className="relative isolate flex h-screen w-full flex-col justify-start overflow-hidden pt-40 md:justify-end md:pt-0"
     >
       {/* ── Background ─────────────────────────────────────────────── */}
@@ -34,14 +42,14 @@ export default function Hero() {
       <div className="mx-auto w-full max-w-[1920px] px-6 pb-20">
         {/* Headline row */}
         <motion.div
-          variants={container}
+          variants={reduceMotion ? undefined : container}
           className="flex flex-col items-start gap-6 md:flex-row md:items-end"
         >
           {/* Brand name */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            initial={reduceMotion ? false : { y: 20, opacity: 0 }}
+            animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
             className="relative w-[60vw] max-w-[300px] min-w-[300px]"
           >
             <Image
@@ -57,9 +65,9 @@ export default function Hero() {
 
           {/* Tag-line (wraps under larger screens) */}
           <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            initial={reduceMotion ? false : { y: 20, opacity: 0 }}
+            animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.15 }}
             className="max-w-2xl text-lg font-medium text-white md:pl-10 md:text-2xl"
           >
             Especialistas en murales que transforman espacios cotidianos en
@@ -69,9 +77,9 @@ export default function Hero() {
 
         {/* CTA buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial={reduceMotion ? false : { opacity: 0, y: 10 }}
+          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.5 }}
           className="absolute inset-x-0 bottom-20 z-20 mx-auto flex w-full max-w-[1920px] flex-col gap-4 px-6 md:static md:bottom-auto md:mt-12 md:flex-row"
         >
           <a
