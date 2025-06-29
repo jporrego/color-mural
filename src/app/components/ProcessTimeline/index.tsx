@@ -1,7 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
+import useIsDesktop from '@/hooks/useIsDesktop';
 
 const steps = [
   {
@@ -27,6 +28,11 @@ const steps = [
 ];
 
 export default function ProcessTimeline() {
+  const isDesktop = useIsDesktop();
+  const prefersReducedMotion = useReducedMotion();
+  const reduceMotion = prefersReducedMotion || !isDesktop;
+  const animationKey = reduceMotion ? 'no-motion' : 'with-motion';
+
   return (
     <section id="proceso" className="relative overflow-hidden py-24 text-white">
       <div className="overflow-repeat pointer-events-none absolute inset-x-0 -top-20 -z-10 h-full">
@@ -47,22 +53,23 @@ export default function ProcessTimeline() {
         <div className="mx-auto w-fit">
           <p className="mb-6">/ Proceso</p>
           <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            key={animationKey}
+            initial={reduceMotion ? false : { opacity: 0, y: 40 }}
+            whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={reduceMotion ? undefined : { once: true }}
             className="mb-16 text-center text-3xl font-semibold md:text-6xl"
           >
             Nuestro<span className="text-primary"> proceso</span>
           </motion.h2>
         </div>
 
-        {/* timeline */}
         <motion.ul
+          key={animationKey}
           variants={{ show: { transition: { staggerChildren: 0.15 } } }}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          initial={reduceMotion ? false : 'hidden'}
+          whileInView={reduceMotion ? undefined : 'show'}
+          viewport={reduceMotion ? undefined : { once: true, amount: 0.2 }}
           className="relative before:absolute before:top-0 before:left-1/2 before:h-full before:w-px before:-translate-x-1/2 before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent"
         >
           {steps.map((step, idx) => (
@@ -76,16 +83,18 @@ export default function ProcessTimeline() {
                   transition: { duration: 0.6, ease: 'easeOut' },
                 },
               }}
-              className={`group relative mb-20 flex w-full items-center ${idx % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}
+              className={`group relative mb-20 flex w-full items-center ${
+                idx % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
+              }`}
             >
-              {/* connector dot */}
               <span className="absolute top-1/2 left-1/2 z-10 flex h-5 w-5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#2343FF] text-xs font-bold">
                 {idx + 1}
               </span>
 
-              {/* text area */}
               <div
-                className={`basis-1/2 px-4 md:px-8 ${idx % 2 === 0 ? 'text-left' : 'text-right'}`}
+                className={`basis-1/2 px-4 md:px-8 ${
+                  idx % 2 === 0 ? 'text-left' : 'text-right'
+                }`}
               >
                 <div className="rounded-md p-4">
                   <h3 className="text-lg font-medium md:text-xl">
@@ -99,7 +108,7 @@ export default function ProcessTimeline() {
 
               {/* image */}
               <motion.div
-                whileHover={{ scale: 1.03 }}
+                whileHover={reduceMotion ? undefined : { scale: 1.03 }}
                 transition={{ stiffness: 150, damping: 15 }}
                 className="basis-1/2 px-4"
               >

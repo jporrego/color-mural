@@ -1,7 +1,8 @@
 import { Mail, PhoneCall, Copy, LucideIcon } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useState } from 'react';
 import { trackContact } from '../../utils';
+import useIsDesktop from '@/hooks/useIsDesktop';
 
 export default function Contact() {
   const variants = {
@@ -9,6 +10,11 @@ export default function Contact() {
     visible: { opacity: 1, y: 0 },
   };
   const [copied, setCopied] = useState<string | null>(null);
+
+  const isDesktop = useIsDesktop();
+  const prefersReduced = useReducedMotion();
+  const reduceMotion = prefersReduced || !isDesktop;
+  const animationKey = reduceMotion ? 'no-motion' : 'with-motion';
 
   const copyToClipboard = async (text: string) => {
     try {
@@ -66,9 +72,11 @@ export default function Contact() {
       className="bg-primary relative overflow-hidden py-24 text-white"
     >
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        key={animationKey}
+        variants={variants}
+        initial={reduceMotion ? false : 'hidden'}
+        whileInView={reduceMotion ? undefined : 'visible'}
+        viewport={reduceMotion ? undefined : { once: true }}
         transition={{ staggerChildren: 0.15 }}
         className="mx-auto flex max-w-3xl flex-col items-center px-6 text-center"
       >
