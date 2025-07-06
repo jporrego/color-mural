@@ -57,22 +57,25 @@ export default function Hero() {
           className="flex flex-col items-start gap-6 md:flex-row md:items-end"
         >
           {/* Brand name */}
-          <motion.div
+          <motion.h1
             initial={reduceMotion ? false : { y: 20, opacity: 0 }}
             animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
             transition={{ duration: 0.3 }}
             className="relative w-[60vw] max-w-[300px] min-w-[300px]"
           >
+            <span className="sr-only">
+              Color Mural — especialistas en murales urbanos
+            </span>
             <Image
               src="/images/colormural.svg"
-              alt="Color Mural logo"
+              alt="Color Mural — especialistas en murales que transforman espacios cotidianos en hitos urbanos"
               width={536}
               height={412}
               priority
               className="h-auto w-full"
               sizes="(max-width: 768px) 40vw, 20vw"
             />
-          </motion.div>
+          </motion.h1>
 
           {/* Tag-line (wraps under larger screens) */}
           <motion.p
