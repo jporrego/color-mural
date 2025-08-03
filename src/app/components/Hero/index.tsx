@@ -63,18 +63,18 @@ export default function Hero() {
             transition={{ duration: 0.3 }}
             className="relative w-[60vw] max-w-[300px] min-w-[300px]"
           >
-            <span className="sr-only">
-              Color Mural — especialistas en murales urbanos
-            </span>
             <Image
               src="/images/colormural.svg"
-              alt="Color Mural — especialistas en murales que transforman espacios cotidianos en hitos urbanos"
+              alt="Color Mural, servicio de muralismo en Chile"
               width={536}
               height={412}
               priority
               className="h-auto w-full"
               sizes="(max-width: 768px) 40vw, 20vw"
             />
+            <span className="mt-4 block text-xl font-semibold text-white md:text-3xl">
+              Muralismo en Chile y pintor de murales
+            </span>
           </motion.h1>
 
           {/* Tag-line (wraps under larger screens) */}
@@ -84,7 +84,7 @@ export default function Hero() {
             transition={{ duration: 0.3, delay: 0.15 }}
             className="max-w-2xl text-lg font-medium text-white md:pl-10 md:text-2xl"
           >
-            Especialistas en murales que transforman espacios cotidianos en
+            Servicio de muralismo en Chile que transforma espacios cotidianos en
             hitos urbanos, dirigido por el artista Benjamín Contador
           </motion.p>
         </motion.div>
