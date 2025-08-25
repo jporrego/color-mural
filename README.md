@@ -7,7 +7,7 @@
 </p>
 
 
-Color Mural is a single-page portfolio site for a mural studio built with
+Color Mural is a single-page portfolio site for a muralism studio based in Santiago, Chile, built with
 Next.js and Tailwind CSS. It showcases highlighted projects, explains the
 painting process and makes it easy for visitors to get in touch.
 
