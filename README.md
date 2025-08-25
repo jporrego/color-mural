@@ -1,14 +1,24 @@
 # Color Mural
 
-Color Mural is a single‑page portfolio site for a mural studio built with
+<p align="center">
+  <a href="https://colormural.cl/">
+    <img src="https://img.shields.io/badge/Live%20Production%20Site-colormural.cl-2bbc8a?style=for-the-badge" alt="Live Production Site" />
+  </a>
+</p>
+
+
+Color Mural is a single-page portfolio site for a mural studio built with
 Next.js and Tailwind CSS. It showcases highlighted projects, explains the
 painting process and makes it easy for visitors to get in touch.
+
+
+---
 
 ## Features
 
 - Responsive layout with smooth scrolling sections
 - Project gallery with lightbox and inline video
-- Step‑by‑step process timeline
+- Step-by-step process timeline
 - About and contact sections with a WhatsApp shortcut
 - Facebook Pixel analytics integration
 
