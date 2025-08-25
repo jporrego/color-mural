@@ -43,6 +43,7 @@ painting process and makes it easy for visitors to get in touch.
    ```
 
    The site will be available at <http://localhost:3000>.
+   Or visit the **live production site** here: [colormural.cl](https://colormural.cl/)
 
 ## Project Structure
 
