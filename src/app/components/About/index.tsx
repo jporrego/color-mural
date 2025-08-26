@@ -27,9 +27,10 @@ export default function About() {
             Color Mural es el estudio del artista{' '}
             <strong>Benjamin Contador</strong>, especializado en la creación de
             murales a gran escala que transforman muros comunes en hitos
-            urbanos. Creemos en el poder del color, la narrativa visual y la
-            colaboración cercana con cada cliente para plasmar identidad y
-            emoción en cada trazo.
+            urbanos. Ofrecemos servicio de muralismo en Chile para empresas,
+            instituciones y espacios privados, combinando arte urbano con
+            identidad local. Si buscas un pintor de murales que plasme la
+            esencia de tu proyecto, estás en el lugar indicado.
           </p>
 
           {/* quick stats */}
@@ -54,17 +55,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  );
-}
-
-/* ── tiny helper component for stats ───────────────────────────── */
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="flex flex-col items-center sm:items-start">
-      <span className="text-3xl font-bold text-[#2343FF]">{value}</span>
-      <span className="mt-1 text-sm tracking-wide text-white/70 uppercase">
-        {label}
-      </span>
-    </div>
   );
 }
