@@ -7,22 +7,22 @@ import useIsDesktop from '@/hooks/useIsDesktop';
 const steps = [
   {
     title: 'Visita inicial',
-    desc: 'Conocemos el espacio y tu visión',
+    desc: 'Conocemos el espacio y tu visión para definir el alcance del mural y las condiciones técnicas en terreno en cualquier ciudad de Chile.',
     img: '/images/process/visit.webp',
   },
   {
     title: 'Propuesta y boceto',
-    desc: 'Recibes un diseño conceptualizado y personalizado',
+    desc: 'Recibes un diseño conceptualizado y personalizado que incorpora identidad de marca, narrativa local y objetivos comunicacionales.',
     img: '/images/process/design.webp',
   },
   {
     title: 'Aprobación y producción',
-    desc: 'Se agenda y ejecuta el mural',
+    desc: 'Se agenda y ejecuta el mural con un equipo especializado en muralismo profesional, gestión de permisos y seguridad.',
     img: '/images/process/process1.webp',
   },
   {
     title: 'Entrega final',
-    desc: '¡Listo para ser admirado y fotografiado!',
+    desc: 'Sellamos y protegemos la obra para que quede lista para comunicar y ser fotografiada como un hito urbano.',
     img: '/images/portfolio/5-crop.webp',
   },
 ];
@@ -48,7 +48,7 @@ export default function ProcessTimeline() {
       {/* decorative rings (optional) */}
       <div className="pointer-events-none absolute top-0 left-1/2 h-[1800px] w-[1800px] -translate-x-1/2 rounded-full border border-white/5" />
       <div className="pointer-events-none absolute top-[300px] left-1/2 h-[1800px] w-[1800px] -translate-x-1/2 rounded-full border border-white/5" />
-      <div className="px-2md:px-6 mx-auto max-w-[1000px]">
+      <div className="mx-auto max-w-[1000px] px-2 md:px-6">
         {/* heading */}
         <div className="mx-auto w-fit">
           <p className="mb-6">/ Proceso</p>

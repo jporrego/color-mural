@@ -30,9 +30,12 @@ export default function Navbar() {
 
   const links = [
     { href: '#inicio', label: 'Inicio' },
+    { href: '#servicios', label: 'Servicios' },
     { href: '#proyectos', label: 'Proyectos' },
     { href: '#proceso', label: 'Proceso' },
     { href: '#sobre', label: 'Sobre nosotros' },
+    { href: '#cobertura', label: 'Cobertura' },
+    { href: '#faq', label: 'FAQ' },
     { href: '#contacto', label: 'Contacto' },
   ];
 

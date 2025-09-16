@@ -57,36 +57,58 @@ export default function Hero() {
           className="flex flex-col items-start gap-6 md:flex-row md:items-end"
         >
           {/* Brand name */}
-          <motion.h1
-            initial={reduceMotion ? false : { y: 20, opacity: 0 }}
-            animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            className="relative w-[60vw] max-w-[300px] min-w-[300px]"
-          >
-            <span className="sr-only">
-              Color Mural — especialistas en murales urbanos
-            </span>
-            <Image
-              src="/images/colormural.svg"
-              alt="Color Mural — especialistas en murales que transforman espacios cotidianos en hitos urbanos"
-              width={536}
-              height={412}
-              priority
-              className="h-auto w-full"
-              sizes="(max-width: 768px) 40vw, 20vw"
-            />
-          </motion.h1>
+          <div className="flex items-end gap-4">
+            <motion.h1
+              initial={reduceMotion ? false : { y: 20, opacity: 0 }}
+              animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="text-3xl leading-tight font-bold text-white md:text-5xl"
+            >
+              Color Mural: muralismo en Chile para marcas, espacios públicos y
+              hogares
+            </motion.h1>
+
+            <motion.div
+              initial={reduceMotion ? false : { y: 20, opacity: 0 }}
+              animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
+              transition={{ duration: 0.3, delay: 0.15 }}
+              className="relative hidden w-[110px] shrink-0 md:block"
+              aria-hidden
+            >
+              <Image
+                src="/images/colormural.svg"
+                alt="Color Mural"
+                width={220}
+                height={170}
+                priority
+                className="h-auto w-full"
+                sizes="110px"
+              />
+            </motion.div>
+          </div>
 
           {/* Tag-line (wraps under larger screens) */}
-          <motion.p
+          <motion.div
             initial={reduceMotion ? false : { y: 20, opacity: 0 }}
             animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.15 }}
-            className="max-w-2xl text-lg font-medium text-white md:pl-10 md:text-2xl"
+            className="max-w-3xl space-y-4 text-lg text-white md:pl-10 md:text-xl"
           >
-            Especialistas en murales que transforman espacios cotidianos en
-            hitos urbanos, dirigido por el artista Benjamín Contador
-          </motion.p>
+            <p>
+              Somos un estudio de muralismo chileno liderado por el artista
+              Benjamín Contador. Diseñamos y pintamos murales para empresas,
+              municipalidades, inmobiliarias y residencias particulares que
+              buscan comunicar identidad a través del arte urbano.
+            </p>
+            <p className="text-base text-white/80 md:text-lg">
+              Desde Santiago hacia todo Chile desarrollamos proyectos de{' '}
+              <strong>muralismo corporativo</strong>, intervenciones en{' '}
+              <strong>espacios comerciales</strong> y obras a medida para{' '}
+              <strong>hogares y comunidades</strong>. Nuestro servicio incluye
+              conceptualización, producción y ejecución profesional para que tu
+              muro se convierta en un hito memorable.
+            </p>
+          </motion.div>
         </motion.div>
 
         {/* CTA buttons */}

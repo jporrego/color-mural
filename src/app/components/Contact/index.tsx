@@ -91,7 +91,10 @@ export default function Contact() {
           variants={variants}
           className="mt-3 max-w-prose text-lg text-white/80 md:text-xl"
         >
-          Conversemos sobre tu proyecto.
+          Cuéntanos qué tipo de mural necesitas y en qué ciudad se encuentra el
+          proyecto. Respondemos en menos de 24 horas a organizaciones y
+          particulares que buscan{' '}
+          <strong>servicio de muralismo en Chile</strong>.
         </motion.p>
 
         <div className="mt-16 grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
@@ -108,6 +111,24 @@ export default function Contact() {
             method="phone"
           />
         </div>
+
+        <motion.div
+          variants={variants}
+          className="mt-12 w-full rounded-2xl bg-white/10 p-6 text-left text-sm text-white/80"
+        >
+          <p>
+            <strong>Horarios:</strong> Lunes a viernes de 9:00 a 18:30 hrs. Las
+            visitas a terreno se coordinan con anticipación.
+          </p>
+          <p className="mt-3">
+            <strong>Ubicación:</strong> Av. Nueva Providencia 1881, oficina
+            1504, Providencia, Santiago, Chile.
+          </p>
+          <p className="mt-3">
+            También atendemos proyectos en Valparaíso, Concepción, Antofagasta,
+            La Serena y otras regiones mediante agendas intensivas.
+          </p>
+        </motion.div>
       </motion.div>
     </section>
   );
