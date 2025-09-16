@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Raleway, Roboto, Roboto_Slab, DM_Sans } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 const raleway = Raleway({

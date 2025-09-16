@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { trackContact } from '../../utils';
 
 export default function WhatsAppButton() {
@@ -12,7 +13,7 @@ export default function WhatsAppButton() {
       className="fixed bottom-20 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform hover:scale-110"
       onMouseDown={() => trackContact('whatsapp')}
     >
-      <img src="/whatsapp.svg" alt="WhatsApp" className="h-6 w-6" />
+      <Image src="/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
     </a>
   );
 }
