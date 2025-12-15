@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
 
-const INPUT_DIR = 'public/images/portfolio-src';
-const OUTPUT_DIR = 'public/images/portfolio-v2';
+const INPUT_DIR = 'public/images/process-src';
+const OUTPUT_DIR = 'public/images/process';
 const SIZES = [320, 640, 960, 1280, 1920];
 
 fs.mkdirSync(OUTPUT_DIR, { recursive: true });
