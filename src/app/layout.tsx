@@ -35,6 +35,7 @@ const structuredData = {
   serviceType: [
     'Muralismo en Chile',
     'Muralismo en Santiago',
+    "Muralismo en regiones de Chile",
     'Murales para empresas',
     'Murales decorativos',
     'Murales por encargo',
@@ -90,6 +91,8 @@ export const metadata: Metadata = {
     type: 'website',
     images: ['/opengraph-image.jpg'],
   },
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
 
   // icons: {
   //   icon: '/favicon.ico',
