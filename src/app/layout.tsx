@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Raleway, Roboto, Roboto_Slab, DM_Sans } from 'next/font/google';
 import './globals.css';
 
@@ -65,7 +66,6 @@ export const metadata: Metadata = {
     'muralistas profesionales',
     'muralistas en Chile',
     'muralistas en Santiago',
-    'muralistas profesionales',
     'pintor de murales',
     'murales decorativos',
     'murales profesionales',
@@ -82,6 +82,8 @@ export const metadata: Metadata = {
     'Benjamín Contador',
   ],
   metadataBase: new URL('https://www.colormural.cl'),
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Color Mural - Muralistas profesionales en Chile y Santiago',
     description:
@@ -91,8 +93,6 @@ export const metadata: Metadata = {
     type: 'website',
     images: ['/opengraph-image.jpg'],
   },
-  alternates: { canonical: '/' },
-  robots: { index: true, follow: true },
 
   // icons: {
   //   icon: '/favicon.ico',
@@ -110,9 +110,11 @@ export default function RootLayout({
       <body
         className={`antialiased ${raleway.variable} ${roboto.variable} ${robotoSlab.variable} ${dmSans.variable}`}
       >
-        <script
+
+        <Script
+          id="ld-json"
           type="application/ld+json"
-          suppressHydrationWarning
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
