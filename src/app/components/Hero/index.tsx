@@ -36,13 +36,21 @@ export default function Hero() {
             className="h-full w-full object-cover brightness-40"
           />
         ) : (
-          <Image
-            src="/images/portfolio/5.webp"
-            alt="Color Mural background"
-            fill
-            priority
-            className="object-cover brightness-40"
-          />
+        <img
+  src="/images/portfolio/5-960.webp"
+  srcSet="
+    /images/portfolio/5-320.webp 320w,
+    /images/portfolio/5-640.webp 640w,
+    /images/portfolio/5-960.webp 960w,
+    /images/portfolio/5-1280.webp 1280w,
+    /images/portfolio/5-1920.webp 1920w
+  "
+  sizes="100vw"
+  alt="Color Mural background"
+  className="absolute inset-0 h-full w-full object-cover brightness-40"
+  loading="eager"
+  decoding="async"
+/>
         )}
       </div>
 
