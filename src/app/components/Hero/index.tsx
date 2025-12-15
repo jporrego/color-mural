@@ -68,7 +68,7 @@ export default function Hero() {
             initial={reduceMotion ? false : { y: 20, opacity: 0 }}
             animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="relative w-[60vw] max-w-[420px] min-w-[300px] text-white"
+            className="relative w-[60vw] max-w-[300px] min-w-[300px]"
           >
             <img
               src="/images/colormural.svg"
@@ -79,24 +79,21 @@ export default function Hero() {
               loading="eager"
               fetchPriority="high"
             />
-            <span className="mt-4 block text-xl leading-tight font-semibold md:text-2xl">
-              Muralismo profesional en Chile y Santiago: murales decorativos y
-              corporativos a medida
-            </span>
+
           </motion.h1>
 
           {/* Tag-line (wraps under larger screens) */}
           <motion.p
-            initial={reduceMotion ? false : { y: 20, opacity: 0 }}
-            animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.15 }}
-            className="max-w-3xl text-lg font-medium text-white md:pl-10 md:text-2xl"
-          >
-            Especialistas en muralismo en Chile para empresas, oficinas y
-            hogares. Diseñamos y pintamos murales por encargo, murales
-            decorativos y proyectos corporativos que resaltan la identidad de tu
-            marca. Estudio dirigido por el artista muralista Benjamín Contador.
-          </motion.p>
+          initial={reduceMotion ? false : { y: 20, opacity: 0 }}
+          animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.15 }}
+          className="max-w-3xl text-lg font-medium text-white md:pl-10 md:text-2xl"
+        >
+          Especialistas en diseño y pintura de murales para empresas y hogares
+          en Chile. Realizamos proyectos por encargo que potencian la
+          identidad de tu marca y renuevan tus espacios. Estudio dirigido por
+          el artista Benjamín Contador.
+        </motion.p>
         </motion.div>
 
         {/* CTA buttons */}
