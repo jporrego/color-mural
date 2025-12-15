@@ -35,10 +35,8 @@ export default function Projects({ onImageClick }: Props) {
           <CornerRightDown className="text-primarux font-boy size-8 translate-y-[8px]" />
         </h2>
         <p className="mb-12 max-w-[800px]">
-          Explora murales realizados en Santiago y otras ciudades de Chile:
-          proyectos corporativos para oficinas y retail, murales decorativos en
-          hogares y fachadas, y encargos personalizados que muestran nuestro
-          enfoque profesional de diseño y pintura de murales.
+          Explora murales realizados en Santiago, regiones y a nivel internacional. Presentamos proyectos corporativos
+        para oficinas y retail, arte decorativo para hogares y fachadas.
         </p>
 
         {/* ③ first image grid */}

@@ -51,8 +51,8 @@ export default function Home() {
       </noscript> */}
       <Navbar />
       <Hero />
-      <Services />
       <Projects onImageClick={handleOpen} />
+      <Services />
       <ProcessTimeline />
       <About />
       <Contact />
