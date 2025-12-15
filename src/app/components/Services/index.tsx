@@ -4,30 +4,28 @@ import { CheckCircle } from 'lucide-react';
 
 const serviceLists = [
   {
-    title: 'Murales para empresas y oficinas',
+    title: 'Murales Corporativos ',
     items: [
-      'Murales corporativos en Santiago y otras ciudades de Chile',
-      'Diseño y pintura de murales para oficinas, cowork y retail',
-      'Murales por encargo que refuerzan cultura interna y marca empleadora',
-      'Murales a medida para salas de reuniones, hall de acceso y fachadas',
+      'Arte corporativo de alto impacto en Santiago y regiones.',
+      'Diseños que refuerzan la cultura interna y marca.',
+      'Murales a medida para oficinas, salas de reuniones, coworks y fachadas.',
     ],
   },
   {
-    title: 'Murales decorativos y residenciales',
+    title: 'Muralismo Decorativo y Residencial',
     items: [
-      'Murales decorativos para hogares, terrazas y departamentos',
-      'Muralistas profesionales para proyectos boutique en Santiago y regiones',
-      'Creación de murales personalizados con estilos contemporáneos y artísticos',
-      'Murales a medida pensados para diseño de interiores y paisajismo',
+      'Murales exclusivos para hogares, terrazas y departamentos.',
+      'Proyectos boutique integrados al diseño de interiores y paisajismo.',
+      'Estilos contemporáneos personalizados por artistas profesionales.',
     ],
   },
   {
-    title: 'Proceso y contratación de muralismo',
+    title: 'Proceso y Contratación',
     items: [
-      'Asesoría inicial y visita a terreno en Chile para definir el alcance',
-      'Boceto y presupuesto transparente antes de pintar el mural',
-      'Ejecución segura y rápida por muralistas profesionales',
-      'Opciones para empresas que buscan contratar muralista en Chile de forma ágil',
+      'Asesoría inicial y visita a terreno para definir el alcance.',
+      'Boceto digital y presupuesto transparente antes de pintar.',
+      'Ejecución limpia y segura por nuestro equipo de muralistas.',
+      'Gestión ágil para empresas que buscan contratar arte en Chile.',
     ],
   },
 ];
@@ -47,13 +45,12 @@ export default function Services() {
             / Servicios
           </p>
           <h2 className="text-3xl font-semibold md:text-5xl">
-            Muralismo en Chile para marcas, oficinas y espacios decorativos
+            Muralismo profesional para empresas y espacios residenciales
           </h2>
           <p className="mt-4 text-lg text-white/85">
-            Somos un estudio de muralistas profesionales en Chile especializado
-            en murales decorativos, corporativos y murales por encargo en
-            Santiago y regiones. Combinamos arte y estrategia para crear murales
-            a medida que potencian la identidad de cada espacio.
+            Combinamos arte y estrategia para transformar oficinas, locales
+            comerciales y hogares, creando piezas únicas que potencian cada
+            lugar.
           </p>
         </div>
 
@@ -69,23 +66,13 @@ export default function Services() {
               <ul className="mt-4 space-y-3 text-sm text-white/80">
                 {service.items.map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <CheckCircle className="mt-0.5 h-4 w-4 text-[#6ea3ff]" />
+                    <CheckCircle className="mt-0.5 h-4 w-4 min-w-[16px] text-[#6ea3ff]" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
-        </div>
-
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-sm text-white/80 md:text-base">
-          <p>
-            ¿Buscas contratar muralista en Chile? Agendamos proyectos en
-            Santiago, Valparaíso y otras regiones. Realizamos murales a medida
-            para empresas, oficinas, hoteles, restaurantes y proyectos
-            residenciales, siempre con un proceso claro de diseño y pintura de
-            murales.
-          </p>
         </div>
       </div>
     </section>
