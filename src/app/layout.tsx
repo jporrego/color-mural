@@ -36,7 +36,7 @@ const structuredData = {
   serviceType: [
     'Muralismo en Chile',
     'Muralismo en Santiago',
-    "Muralismo en regiones de Chile",
+    'Muralismo·en·regiones·de·Chile',
     'Murales para empresas',
     'Murales decorativos',
     'Murales por encargo',
