@@ -1,7 +1,6 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
-import Image from 'next/image';
 import useIsDesktop from '@/hooks/useIsDesktop';
 
 const container = {
@@ -36,21 +35,21 @@ export default function Hero() {
             className="h-full w-full object-cover brightness-40"
           />
         ) : (
-        <img
-  src="/images/portfolio/5-960.webp"
-  srcSet="
+          <img
+            src="/images/portfolio/5-960.webp"
+            srcSet="
     /images/portfolio/5-320.webp 320w,
     /images/portfolio/5-640.webp 640w,
     /images/portfolio/5-960.webp 960w,
     /images/portfolio/5-1280.webp 1280w,
     /images/portfolio/5-1920.webp 1920w
   "
-  sizes="100vw"
-  alt="Color Mural background"
-  className="absolute inset-0 h-full w-full object-cover brightness-40"
-  loading="eager"
-  decoding="async"
-/>
+            sizes="100vw"
+            alt="Mural corporativo pintado por Color Mural en Santiago de Chile"
+            className="absolute inset-0 h-full w-full object-cover brightness-40"
+            loading="eager"
+            decoding="async"
+          />
         )}
       </div>
 
@@ -71,9 +70,6 @@ export default function Hero() {
             transition={{ duration: 0.3 }}
             className="relative w-[60vw] max-w-[300px] min-w-[300px]"
           >
-            <span className="sr-only">
-              Color Mural — especialistas en murales urbanos
-            </span>
             <img
               src="/images/colormural.svg"
               alt="Color Mural — especialistas en murales que transforman espacios cotidianos en hitos urbanos"
@@ -83,19 +79,21 @@ export default function Hero() {
               loading="eager"
               fetchPriority="high"
             />
-                  
+
           </motion.h1>
 
           {/* Tag-line (wraps under larger screens) */}
           <motion.p
-            initial={reduceMotion ? false : { y: 20, opacity: 0 }}
-            animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.15 }}
-            className="max-w-2xl text-lg font-medium text-white md:pl-10 md:text-2xl"
-          >
-            Especialistas en murales que transforman espacios cotidianos en
-            hitos urbanos, dirigido por el artista Benjamín Contador
-          </motion.p>
+          initial={reduceMotion ? false : { y: 20, opacity: 0 }}
+          animate={reduceMotion ? undefined : { y: 0, opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.15 }}
+          className="max-w-3xl text-lg font-medium text-white md:pl-10 md:text-2xl"
+        >
+          Especialistas en diseño y pintura de murales para empresas y hogares
+          en Chile. Realizamos proyectos por encargo que potencian la
+          identidad de tu marca y renuevan tus espacios. Estudio dirigido por
+          el artista Benjamín Contador.
+        </motion.p>
         </motion.div>
 
         {/* CTA buttons */}

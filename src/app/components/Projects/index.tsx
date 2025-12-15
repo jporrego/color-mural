@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { CornerRightDown } from 'lucide-react';
 import useIsDesktop from '@/hooks/useIsDesktop';
 
@@ -36,9 +35,8 @@ export default function Projects({ onImageClick }: Props) {
           <CornerRightDown className="text-primarux font-boy size-8 translate-y-[8px]" />
         </h2>
         <p className="mb-12 max-w-[800px]">
-          Explora el portafolio de nuestro estudio para descubrir cómo Color
-          Mural transforma muros en obras memorables que dan nueva vida a
-          espacios corporativos, comerciales y residenciales.
+          Explora murales realizados en Santiago, regiones y a nivel internacional. Presentamos proyectos corporativos
+        para oficinas y retail, arte decorativo para hogares y fachadas.
         </p>
 
         {/* ③ first image grid */}
@@ -48,23 +46,23 @@ export default function Projects({ onImageClick }: Props) {
               <button
                 key={file}
                 className="group relative aspect-[4/3] overflow-hidden rounded-sm"
-       onClick={() => onImageClick(`/images/portfolio/${file.replace('.webp', '')}`)}
-
+                onClick={() =>
+                  onImageClick(`/images/portfolio/${file.replace('.webp', '')}`)
+                }
               >
-               <img
-                src={`/images/portfolio/${file.replace('.webp', '-640.webp')}`}
-                srcSet={`
+                <img
+                  src={`/images/portfolio/${file.replace('.webp', '-640.webp')}`}
+                  srcSet={`
                   /images/portfolio/${file.replace('.webp', '-320.webp')} 320w,
                   /images/portfolio/${file.replace('.webp', '-640.webp')} 640w,
                   /images/portfolio/${file.replace('.webp', '-960.webp')} 960w
                 `}
-                sizes="(max-width:768px) 50vw, 33vw"
-                alt={`Mural ${file}`}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-
+                  sizes="(max-width:768px) 50vw, 33vw"
+                  alt={`Mural artístico profesional en Chile - proyecto ${file.replace('.webp', '')}`}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
               </button>
             );
           })}
@@ -91,22 +89,23 @@ export default function Projects({ onImageClick }: Props) {
               <button
                 key={file}
                 className="group relative aspect-[4/3] overflow-hidden rounded-sm"
-           onClick={() => onImageClick(`/images/portfolio/${file.replace('.webp', '')}`)}
+                onClick={() =>
+                  onImageClick(`/images/portfolio/${file.replace('.webp', '')}`)
+                }
               >
-              <img
-                src={`/images/portfolio/${file.replace('.webp', '-640.webp')}`}
-                srcSet={`
+                <img
+                  src={`/images/portfolio/${file.replace('.webp', '-640.webp')}`}
+                  srcSet={`
                   /images/portfolio/${file.replace('.webp', '-320.webp')} 320w,
                   /images/portfolio/${file.replace('.webp', '-640.webp')} 640w,
                   /images/portfolio/${file.replace('.webp', '-960.webp')} 960w
                 `}
-                sizes="(max-width:768px) 50vw, 33vw"
-                alt={`Mural ${file}`}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-
+                  sizes="(max-width:768px) 50vw, 33vw"
+                  alt={`Mural artístico profesional en Chile - proyecto ${file.replace('.webp', '')}`}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
               </button>
             );
           })}
