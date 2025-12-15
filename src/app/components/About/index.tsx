@@ -22,22 +22,19 @@ export default function About() {
           </h2>
 
           <p className="mx-auto max-w-prose text-lg leading-relaxed text-white/85 md:mx-0">
-            Color Mural es el estudio del artista{' '}
-            <strong>Benjamin Contador</strong>, especializado en la creación de
-            murales a gran escala que transforman muros comunes en hitos
-            urbanos. Somos muralistas profesionales en Chile y Santiago y
-            trabajamos con empresas, oficinas y proyectos residenciales para
-            crear murales decorativos, corporativos y murales por encargo.
-            Creemos en el poder del color, la narrativa visual y la colaboración
-            cercana con cada cliente para plasmar identidad y emoción en cada
-            trazo.
+            <strong>Color Mural</strong> es el estudio profesional de{' '}
+            <strong>Benjamin Contador</strong>, especializados en crear
+            arte a gran escala que transforma muros comunes en hitos
+            urbanos. Ofrecemos soluciones de muralismo en Chile para empresas,
+            oficinas y proyectos residenciales en Santiago y regiones.
           </p>
 
-          <p className="mt-6 max-w-prose text-base leading-relaxed text-white/70">
-            Diseñamos murales a medida que comunican propósito: branding,
-            cultura organizacional o experiencias inmersivas. Si necesitas
-            contratar muralista profesional en Chile o un pintor de murales en
-            Santiago, te guiamos desde la idea hasta la instalación final.
+          <p className="mt-6 max-w-prose text-lg *:leading-relaxed text-white/85">
+            Creemos en el poder del color y la narrativa visual para plasmar
+            tu marca, comunicar propósito y reforzar la cultura organizacional.
+            Si buscas contratar un muralista o un pintor profesional para tu
+            proyecto, te guiamos de forma colaborativa desde el concepto inicial
+            hasta la instalación final.
           </p>
 
           {/* quick stats */}
