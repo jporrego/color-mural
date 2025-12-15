@@ -91,11 +91,7 @@ export default function Contact() {
           variants={variants}
           className="mt-3 max-w-prose text-lg text-white/80 md:text-xl"
         >
-          Conversemos sobre tu proyecto. Escríbenos para murales en Santiago y
-          todo Chile: murales para empresas, oficinas, hoteles, restaurantes o
-          murales decorativos residenciales. Nuestro equipo de muralistas
-          profesionales acompaña cada etapa, desde el boceto hasta la pintura en
-          muro.
+          Conversemos sobre tu proyecto.
         </motion.p>
 
         <div className="mt-16 grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
