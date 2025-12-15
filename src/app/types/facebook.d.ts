@@ -1,9 +1,9 @@
 declare global {
   interface Window {
-    fbq?: (...args: any[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 
-  const fbq: (...args: any[]) => void;
+  const fbq: (...args: unknown[]) => void;
 }
 
 export {};

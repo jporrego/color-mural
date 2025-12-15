@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Raleway, Roboto, Roboto_Slab, DM_Sans } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 const raleway = Raleway({
@@ -23,22 +22,69 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'Color Mural – Servicio de muralismo en Chile',
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Color Mural',
+  url: 'https://www.colormural.cl',
+  logo: 'https://www.colormural.cl/images/colormural_icon.svg',
+  image: 'https://www.colormural.cl/opengraph-image.jpg',
   description:
-    'Color Mural es el estudio del artista Benjamín Contador, especializado en murales que transforman espacios urbanos y comerciales, con un servicio de muralismo que aporta identidad y carácter a cada entorno.',
+    'Muralismo profesional en Chile y Santiago: murales decorativos y corporativos personalizados para empresas, oficinas y hogares.',
+  areaServed: ['Chile', 'Santiago de Chile'],
+  serviceType: [
+    'Muralismo en Chile',
+    'Muralismo en Santiago',
+    'Murales para empresas',
+    'Murales decorativos',
+    'Murales por encargo',
+  ],
+  sameAs: [
+    'https://www.instagram.com/colormuralchile/',
+    'https://wa.me/56995767606',
+  ],
+  telephone: '+56 9 9576 7606',
+  email: 'hola@colormural.cl',
+  founder: {
+    '@type': 'Person',
+    name: 'Benjamín Contador',
+    jobTitle: 'Artista muralista',
+  },
+};
+
+export const metadata: Metadata = {
+  title:
+    'Color Mural – Muralismo profesional en Chile y Santiago | Murales corporativos y decorativos',
+  description:
+    'Color Mural es un estudio de muralistas profesionales liderado por Benjamín Contador. Creamos murales decorativos y corporativos a medida en Chile y Santiago para empresas, oficinas, hogares y proyectos por encargo.',
   keywords: [
-    'murales',
-    'arte urbano',
-    'Benjamín Contador',
+    'muralismo Chile',
+    'muralismo en Chile',
+    'muralismo Santiago',
+    'muralistas profesionales',
+    'muralistas en Chile',
+    'muralistas en Santiago',
+    'muralistas profesionales',
+    'pintor de murales',
+    'murales decorativos',
+    'murales profesionales',
+    'murales en Chile',
+    'murales en Santiago',
+    'murales para empresas',
+    'murales para oficinas',
+    'murales por encargo',
+    'murales a medida',
+    'diseño y pintura de murales',
+    'contratar muralista en Chile',
+    'contratar muralista profesional',
     'Color Mural',
-    'Chile',
+    'Benjamín Contador',
   ],
   metadataBase: new URL('https://www.colormural.cl'),
   openGraph: {
-    title: 'Color Mural - Estudio de Murales',
+    title: 'Color Mural - Muralistas profesionales en Chile y Santiago',
     description:
-      'Descubre cómo Color Mural convierte muros comunes en verdaderos hitos urbanos. Solicita un mural personalizado para tu proyecto.',
+      'Muralismo profesional para empresas, oficinas y espacios residenciales en Chile. Murales decorativos y corporativos personalizados por Color Mural.',
     url: 'https://www.colormural.cl',
     locale: 'es_CL',
     type: 'website',
@@ -61,6 +107,11 @@ export default function RootLayout({
       <body
         className={`antialiased ${raleway.variable} ${roboto.variable} ${robotoSlab.variable} ${dmSans.variable}`}
       >
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         {children}
       </body>
       {/* <GoogleAnalytics gaId="G-DPRRN2C238" /> */}

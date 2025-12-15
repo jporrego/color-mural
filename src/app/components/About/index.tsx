@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 export default function About() {
   return (
     <section
@@ -27,9 +25,19 @@ export default function About() {
             Color Mural es el estudio del artista{' '}
             <strong>Benjamin Contador</strong>, especializado en la creación de
             murales a gran escala que transforman muros comunes en hitos
-            urbanos. Creemos en el poder del color, la narrativa visual y la
-            colaboración cercana con cada cliente para plasmar identidad y
-            emoción en cada trazo.
+            urbanos. Somos muralistas profesionales en Chile y Santiago y
+            trabajamos con empresas, oficinas y proyectos residenciales para
+            crear murales decorativos, corporativos y murales por encargo.
+            Creemos en el poder del color, la narrativa visual y la colaboración
+            cercana con cada cliente para plasmar identidad y emoción en cada
+            trazo.
+          </p>
+
+          <p className="mt-6 max-w-prose text-base leading-relaxed text-white/70">
+            Diseñamos murales a medida que comunican propósito: branding,
+            cultura organizacional o experiencias inmersivas. Si necesitas
+            contratar muralista profesional en Chile o un pintor de murales en
+            Santiago, te guiamos desde la idea hasta la instalación final.
           </p>
 
           {/* quick stats */}
@@ -42,36 +50,24 @@ export default function About() {
 
         {/* ── hero image ─────────────────────────────────────────── */}
         <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-2xl">
-        <img
-          src="/images/about-960.webp"
-          srcSet="
+          <img
+            src="/images/about-960.webp"
+            srcSet="
             /images/about-320.webp 320w,
             /images/about-640.webp 640w,
             /images/about-960.webp 960w,
             /images/about-1280.webp 1280w,
           "
-          sizes="100vw"
-          alt="Equipo Color Mural trabajando"
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1"
-          decoding="async"
-        />
+            sizes="100vw"
+            alt="Equipo Color Mural trabajando"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1"
+            decoding="async"
+          />
 
           {/* subtle blue overlay on hover */}
           <div className="pointer-events-none absolute inset-0 bg-[#2343FF]/0 transition-colors duration-500 group-hover:bg-[#2343FF]/10" />
         </div>
       </div>
     </section>
-  );
-}
-
-/* ── tiny helper component for stats ───────────────────────────── */
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="flex flex-col items-center sm:items-start">
-      <span className="text-3xl font-bold text-[#2343FF]">{value}</span>
-      <span className="mt-1 text-sm tracking-wide text-white/70 uppercase">
-        {label}
-      </span>
-    </div>
   );
 }

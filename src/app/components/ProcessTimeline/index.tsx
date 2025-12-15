@@ -1,7 +1,6 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
-import Image from 'next/image';
 import useIsDesktop from '@/hooks/useIsDesktop';
 
 const steps = [
@@ -36,20 +35,19 @@ export default function ProcessTimeline() {
   return (
     <section id="proceso" className="relative overflow-hidden py-24 text-white">
       <div className="overflow-repeat pointer-events-none absolute inset-x-0 -top-20 -z-10 h-full">
-      <img
-        src="/images/portfolio/1-960.webp"
-        srcSet="
+        <img
+          src="/images/portfolio/1-960.webp"
+          srcSet="
           /images/portfolio/1-640.webp 640w,
           /images/portfolio/1-960.webp 960w,
           /images/portfolio/1-1280.webp 1280w,
           /images/portfolio/1-1920.webp 1920w
         "
-        sizes="100vw"
-        alt="Proceso de muralismo"
-        className="absolute inset-0 h-full w-full scale-110 object-cover brightness-20 blur-xlx"
-        decoding="async"
-      />
-
+          sizes="100vw"
+          alt="Proceso de muralismo"
+          className="blur-xlx absolute inset-0 h-full w-full scale-110 object-cover brightness-20"
+          decoding="async"
+        />
       </div>
 
       {/* decorative rings (optional) */}
@@ -120,20 +118,19 @@ export default function ProcessTimeline() {
                 className="basis-1/2 px-4"
               >
                 <div className="relative h-[140px] w-full overflow-hidden rounded-lg shadow-2xl md:h-[220px]">
-               <img
-                  src={step.img.replace(".webp", "-640.webp")}
-                  srcSet={`
-                    ${step.img.replace(".webp", "-320.webp")} 320w,
-                    ${step.img.replace(".webp", "-640.webp")} 640w,
-                    ${step.img.replace(".webp", "-960.webp")} 960w
+                  <img
+                    src={step.img.replace('.webp', '-640.webp')}
+                    srcSet={`
+                    ${step.img.replace('.webp', '-320.webp')} 320w,
+                    ${step.img.replace('.webp', '-640.webp')} 640w,
+                    ${step.img.replace('.webp', '-960.webp')} 960w
                   `}
-                  sizes="(max-width: 768px) 90vw, 50vw"
-                  alt={`Paso ${idx + 1} - ${step.title} del proceso de muralismo`}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading={idx === 0 ? "eager" : "lazy"}
-                  decoding="async"
-                />
-
+                    sizes="(max-width: 768px) 90vw, 50vw"
+                    alt={`Paso ${idx + 1} - ${step.title} del proceso de muralismo`}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                  />
                 </div>
               </motion.div>
             </motion.li>

@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { createPortal } from 'react-dom';
-import Image from 'next/image';
 import { trackContact } from '../../utils';
 
 export default function Navbar() {
@@ -30,6 +29,7 @@ export default function Navbar() {
 
   const links = [
     { href: '#inicio', label: 'Inicio' },
+    { href: '#servicios', label: 'Servicios' },
     { href: '#proyectos', label: 'Proyectos' },
     { href: '#proceso', label: 'Proceso' },
     { href: '#sobre', label: 'Sobre nosotros' },
@@ -45,15 +45,14 @@ export default function Navbar() {
         <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between px-6 py-6 text-white">
           <div className="flex items-center gap-4">
             <div className="relative w-[20px]">
-            <img
-              src="/images/colormural_icon.svg"
-              alt="Color Mural logo"
-              width={536}
-              height={412}
-              className="h-auto w-full"
-              loading="eager"
+              <img
+                src="/images/colormural_icon.svg"
+                alt="Color Mural logo"
+                width={536}
+                height={412}
+                className="h-auto w-full"
+                loading="eager"
               />
-
             </div>
             <div className="hidden gap-4 text-[10px] leading-snug lg:flex">
               <p className="flex flex-col gap-1 text-xs">

@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 interface Props {
   open: boolean;
   imgSrc: string;
@@ -10,7 +8,6 @@ interface Props {
 
 export default function Lightbox({ open, imgSrc, onClose }: Props) {
   if (!open) return null;
-  console.log(imgSrc);
 
   return (
     <div
