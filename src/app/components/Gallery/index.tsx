@@ -40,7 +40,7 @@ const images = [
   },
   {
     original: 'images/portfolio/8.webp',
-    description: 'This is the eighth image in the gallery.',
+    description: 'This is the eighth image in the gallery .',
     thumbnail: 'images/portfolio/8.webp',
   },
 ];

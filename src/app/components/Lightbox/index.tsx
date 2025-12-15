@@ -10,6 +10,7 @@ interface Props {
 
 export default function Lightbox({ open, imgSrc, onClose }: Props) {
   if (!open) return null;
+  console.log(imgSrc);
 
   return (
     <div
@@ -20,16 +21,23 @@ export default function Lightbox({ open, imgSrc, onClose }: Props) {
         className="relative max-h-full max-w-full"
         onClick={(e) => e.stopPropagation()}
       >
-        <Image
-          src={imgSrc}
+        <img
+          src={`${imgSrc}-1280.webp`}
+          srcSet={`
+    ${imgSrc}-640.webp 640w,
+    ${imgSrc}-960.webp 960w,
+    ${imgSrc}-1280.webp 1280w,
+    ${imgSrc}-1920.webp 1920w
+  `}
+          sizes="90vw"
           alt="Mural ampliado"
-          width={1200}
-          height={800}
-          className="max-h-[90vh] rounded-sm object-contain"
+          className="max-h-[90vh] max-w-[90vw] rounded-sm object-contain"
+          loading="eager"
+          decoding="async"
         />
 
         <button
-          className="absolute top-2 right-2 text-2xl leading-none text-white"
+          className="absolute top-2 right-2 text-4xl leading-none text-white"
           onClick={onClose}
         >
           ×

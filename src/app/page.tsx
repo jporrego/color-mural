@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div className="text-dark flex min-h-screen flex-col scroll-smooth font-sans">
-      <Script
+      {/* <Script
         id="facebook-pixel"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -39,16 +39,16 @@ export default function Home() {
             fbq('track', 'PageView');
           `,
         }}
-      />
+      /> */}
       {/* noscript fallback (optional) */}
-      <noscript>
+      {/* <noscript>
         <img
           height="1"
           width="1"
           style={{ display: 'none' }}
           src="https://www.facebook.com/tr?id=728156629371054&ev=PageView&noscript=1"
         />
-      </noscript>
+      </noscript> */}
       <Navbar />
       <Hero />
       <Projects onImageClick={handleOpen} />
