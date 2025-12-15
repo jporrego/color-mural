@@ -74,15 +74,15 @@ export default function Hero() {
             <span className="sr-only">
               Color Mural — especialistas en murales urbanos
             </span>
-            <Image
+            <img
               src="/images/colormural.svg"
               alt="Color Mural — especialistas en murales que transforman espacios cotidianos en hitos urbanos"
               width={536}
               height={412}
-              priority
               className="h-auto w-full"
-              sizes="(max-width: 768px) 40vw, 20vw"
+              loading="eager"
             />
+                  
           </motion.h1>
 
           {/* Tag-line (wraps under larger screens) */}

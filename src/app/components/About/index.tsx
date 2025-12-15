@@ -42,13 +42,20 @@ export default function About() {
 
         {/* ── hero image ─────────────────────────────────────────── */}
         <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-2xl">
-          <Image
-            src="/images/about.webp"
-            alt="Equipo Color Mural trabajando"
-            fill
-            priority
-            className="object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1"
-          />
+        <img
+          src="/images/about-960.webp"
+          srcSet="
+            /images/about-320.webp 320w,
+            /images/about-640.webp 640w,
+            /images/about-960.webp 960w,
+            /images/about-1280.webp 1280w,
+          "
+          sizes="100vw"
+          alt="Equipo Color Mural trabajando"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1"
+          decoding="async"
+        />
+
           {/* subtle blue overlay on hover */}
           <div className="pointer-events-none absolute inset-0 bg-[#2343FF]/0 transition-colors duration-500 group-hover:bg-[#2343FF]/10" />
         </div>

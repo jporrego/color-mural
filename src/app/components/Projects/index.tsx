@@ -48,7 +48,8 @@ export default function Projects({ onImageClick }: Props) {
               <button
                 key={file}
                 className="group relative aspect-[4/3] overflow-hidden rounded-sm"
-                onClick={() => onImageClick(`/images/portfolio/${file.replace('.webp', '-1920.webp')}`)}
+       onClick={() => onImageClick(`/images/portfolio/${file.replace('.webp', '')}`)}
+
               >
                <img
                 src={`/images/portfolio/${file.replace('.webp', '-640.webp')}`}
@@ -90,7 +91,7 @@ export default function Projects({ onImageClick }: Props) {
               <button
                 key={file}
                 className="group relative aspect-[4/3] overflow-hidden rounded-sm"
-             onClick={() => onImageClick(`/images/portfolio/${file.replace('.webp', '-1920.webp')}`)}
+           onClick={() => onImageClick(`/images/portfolio/${file.replace('.webp', '')}`)}
               >
               <img
                 src={`/images/portfolio/${file.replace('.webp', '-640.webp')}`}
