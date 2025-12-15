@@ -48,15 +48,22 @@ export default function Projects({ onImageClick }: Props) {
               <button
                 key={file}
                 className="group relative aspect-[4/3] overflow-hidden rounded-sm"
-                onClick={() => onImageClick(`/images/portfolio/${file}`)}
+                onClick={() => onImageClick(`/images/portfolio/${file.replace('.webp', '-1920.webp')}`)}
               >
-                <Image
-                  src={`/images/portfolio/thumbs/${file}`}
-                  alt={`Mural ${file}`}
-                  fill
-                  sizes="(max-width:768px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+               <img
+                src={`/images/portfolio/${file.replace('.webp', '-640.webp')}`}
+                srcSet={`
+                  /images/portfolio/${file.replace('.webp', '-320.webp')} 320w,
+                  /images/portfolio/${file.replace('.webp', '-640.webp')} 640w,
+                  /images/portfolio/${file.replace('.webp', '-960.webp')} 960w
+                `}
+                sizes="(max-width:768px) 50vw, 33vw"
+                alt={`Mural ${file}`}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+
               </button>
             );
           })}
@@ -83,15 +90,22 @@ export default function Projects({ onImageClick }: Props) {
               <button
                 key={file}
                 className="group relative aspect-[4/3] overflow-hidden rounded-sm"
-                onClick={() => onImageClick(`/images/portfolio/${file}`)}
+             onClick={() => onImageClick(`/images/portfolio/${file.replace('.webp', '-1920.webp')}`)}
               >
-                <Image
-                  src={`/images/portfolio/thumbs/${file}`}
-                  alt={`Mural ${file}`}
-                  fill
-                  sizes="(max-width:768px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+              <img
+                src={`/images/portfolio/${file.replace('.webp', '-640.webp')}`}
+                srcSet={`
+                  /images/portfolio/${file.replace('.webp', '-320.webp')} 320w,
+                  /images/portfolio/${file.replace('.webp', '-640.webp')} 640w,
+                  /images/portfolio/${file.replace('.webp', '-960.webp')} 960w
+                `}
+                sizes="(max-width:768px) 50vw, 33vw"
+                alt={`Mural ${file}`}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+
               </button>
             );
           })}
