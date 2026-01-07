@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { createPortal } from 'react-dom';
-import { trackContact } from '../../utils';
+import { trackContact, trackOutbound } from '../../utils';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,7 +29,7 @@ export default function Navbar() {
 
   const links = [
     { href: '#inicio', label: 'Inicio' },
-    { href: '#proyectos', label: 'Proyectos' },   
+    { href: '#proyectos', label: 'Proyectos' },
     { href: '#servicios', label: 'Servicios' },
     { href: '#proceso', label: 'Proceso' },
     { href: '#sobre', label: 'Sobre nosotros' },
@@ -58,9 +58,9 @@ export default function Navbar() {
               <p className="flex flex-col gap-1 text-xs">
                 Contacto:
                 <a
-                  href="mailto:info@colormural.cl"
+                  href="mailto:hola@colormural.cl"
                   className="hover:text-highlight underline"
-                  onMouseDown={() => trackContact('email')}
+                  onClick={() => trackContact('email', 'navbar')}
                 >
                   hola@colormural.cl
                 </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-highlight underline"
-                  onMouseDown={() => trackContact('instagram')}
+                  onClick={() => trackOutbound('instagram', 'navbar')}
                 >
                   @colormuralchile
                 </a>
