@@ -1,4 +1,4 @@
-import { trackContact } from '../../utils';
+import { trackContact, trackOutbound } from '../../utils';
 
 export default function Footer() {
   return (
@@ -15,7 +15,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
             className="hover:underline"
-            onMouseDown={() => trackContact('instagram')}
+            onClick={() => trackOutbound('instagram', 'footer')}
           >
             Instagram
           </a>
@@ -24,7 +24,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
-            onMouseDown={() => trackContact('whatsapp')}
+            onClick={() => trackContact('whatsapp', 'footer')}
           >
             WhatsApp
           </a>

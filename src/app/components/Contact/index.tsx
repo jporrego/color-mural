@@ -35,7 +35,7 @@ export default function Contact() {
     <a
       href={href}
       className="group block focus:outline-none"
-      onMouseDown={() => trackContact(method)}
+      onClick={() => trackContact(method, 'contact_section')}
     >
       <div className="flex h-full w-full items-center justify-between gap-4 rounded-2xl bg-white/8 p-8">
         <div className="flex items-center gap-4">
@@ -55,6 +55,7 @@ export default function Contact() {
           type="button"
           onClick={(e) => {
             e.preventDefault();
+            e.stopPropagation();
             copyToClipboard(text);
           }}
           aria-label={`Copiar ${text}`}
