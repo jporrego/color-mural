@@ -20,7 +20,7 @@ export default function Footer() {
             Instagram
           </a>
           <a
-            href="https://wa.me/56995767606"
+            href="https://wa.me/56941675960"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"

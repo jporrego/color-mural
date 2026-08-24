@@ -104,8 +104,8 @@ export default function Contact() {
           />
           <ContactCard
             icon={PhoneCall}
-            text="+56 9 9576 7606"
-            href="tel:+56995767606"
+            text="+569 41675960"
+            href="tel:+56941675960"
             method="phone"
           />
         </div>
