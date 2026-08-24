@@ -43,9 +43,9 @@ const structuredData = {
   ],
   sameAs: [
     'https://www.instagram.com/colormuralchile/',
-    'https://wa.me/56995767606',
+    'https://wa.me/56941675960',
   ],
-  telephone: '+56 9 9576 7606',
+  telephone: '+569 41675960',
   email: 'hola@colormural.cl',
   founder: {
     '@type': 'Person',
