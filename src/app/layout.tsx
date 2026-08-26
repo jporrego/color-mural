@@ -117,6 +117,23 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DPRRN2C238"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-tag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-DPRRN2C238');
+              gtag('config', 'AW-1009360898');
+            `,
+          }}
+        />
+        <Script
           id="facebook-pixel"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -144,7 +161,6 @@ export default function RootLayout({
         </noscript>
         {children}
       </body>
-      {/* <GoogleAnalytics gaId="G-DPRRN2C238" /> */}
     </html>
   );
 }
