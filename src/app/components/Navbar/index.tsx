@@ -60,7 +60,14 @@ export default function Navbar() {
                 <a
                   href="mailto:hola@colormural.cl"
                   className="hover:text-highlight underline"
-                  onClick={() => trackContact('email', 'navbar')}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    trackContact(
+                      'email',
+                      'navbar',
+                      'mailto:hola@colormural.cl'
+                    );
+                  }}
                 >
                   hola@colormural.cl
                 </a>

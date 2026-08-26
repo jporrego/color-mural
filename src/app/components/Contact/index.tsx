@@ -35,7 +35,10 @@ export default function Contact() {
     <a
       href={href}
       className="group block focus:outline-none"
-      onClick={() => trackContact(method, 'contact_section')}
+      onClick={(event) => {
+        event.preventDefault();
+        trackContact(method, 'contact_section', href);
+      }}
     >
       <div className="flex h-full w-full items-center justify-between gap-4 rounded-2xl bg-white/8 p-8">
         <div className="flex items-center gap-4">
